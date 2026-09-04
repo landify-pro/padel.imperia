@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f6f0">
+<title>Падел-корт на Катуни — Империя туризма</title>
+<meta name="description" content="Падел-корт на территории «Империи туризма» в Горном Алтае. Цены, правила, видео для начинающих и бронирование по телефону.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+:root{
+  --bg:#f4f5ef;
+  --paper:#fff;
+  --ink:#111819;
+  --muted:#687375;
+  --line:rgba(17,24,25,.10);
+  --lime:#c9f31d;
+  --lime-strong:#afd800;
+  --dark:#101718;
+  --shadow:0 24px 70px rgba(26,43,42,.10);
+  --r-lg:32px;
+  --r-md:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+.kicker{font-size:11px;line-height:1.3;font-weight:850;letter-spacing:.20em;text-transform:uppercase;color:#718600}
+.display{font-size:clamp(50px,6.3vw,92px);line-height:.91;letter-spacing:-.065em;margin:15px 0 0;font-weight:900}
+.display .accent{color:#9fc400}
+.sectionTitle{font-size:clamp(38px,4.6vw,66px);line-height:.96;letter-spacing:-.055em;margin:12px 0 0;font-weight:850}
+.lead{font-size:16px;line-height:1.7;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;border:0;border-radius:14px;background:var(--lime);color:#0e1415;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;padding:17px 20px;transition:.2s ease;cursor:pointer}
+.btn:hover{background:#d6ff2b;transform:translateY(-1px)}
+.btn.dark{background:var(--dark);color:#fff}
+.btn.dark:hover{background:#202a2b}
+.arrow{font-size:17px;line-height:1}
+
+header{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(246,247,242,.91);backdrop-filter:blur(18px);border-bottom:1px solid rgba(17,24,25,.06)}
+.nav{height:78px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto;gap:13px}
+.wordmark{font-size:20px;font-weight:950;letter-spacing:-.045em;line-height:1}
+.wordmark i{font-style:normal;color:#98ba00}
+.brand small{display:block;margin-top:5px;color:#7c8789;font-size:9px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+.navlinks{display:flex;gap:24px}
+.navlinks a{text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:850;letter-spacing:.08em}
+.navlinks a:hover{color:#789200}
+.navbtn{padding:13px 17px}
+.menu{display:none;width:43px;height:43px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font-size:21px;cursor:pointer}
+.mobileDrawer{display:none}
+
+.hero{padding:122px 0 48px;position:relative;overflow:hidden;background:linear-gradient(180deg,#fbfcf8 0%,#f1f4eb 100%)}
+.hero:before{content:"";position:absolute;width:620px;height:620px;right:-300px;top:40px;border-radius:50%;background:rgba(201,243,29,.10);filter:blur(2px)}
+.heroGrid{position:relative;z-index:2;display:grid;grid-template-columns:1.03fr .97fr;gap:58px;align-items:center}
+.heroCopy{padding:36px 0 26px}
+.heroCopy p{max-width:600px;margin:24px 0 0;font-size:17px;line-height:1.7;color:#606c6e}
+.heroActions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:30px}
+.phoneInline{text-decoration:none;font-size:14px;font-weight:850;border-bottom:1px solid rgba(17,24,25,.22);padding:11px 0}
+.heroFacts{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
+.factChip{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:999px;padding:10px 13px;font-size:11px;font-weight:800;color:#4f5b5c}
+.heroVisual{height:620px;border-radius:var(--r-lg);overflow:hidden;position:relative;background:#d8e6dd;box-shadow:var(--shadow)}
+.heroVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(8,14,14,.62) 100%);pointer-events:none}
+.heroVisual img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.heroBadge{position:absolute;z-index:2;top:18px;left:18px;background:rgba(255,255,255,.91);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:10px 13px;font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.heroNumbers{position:absolute;z-index:2;left:20px;right:20px;bottom:19px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.heroNumber{padding:14px 13px;border-radius:15px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
+.heroNumber small{display:block;color:#778183;font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.heroNumber strong{display:block;margin-top:5px;font-size:20px;letter-spacing:-.035em}
+
+section{padding:88px 0}
+.aboutGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+.courtPhoto{height:500px;border-radius:var(--r-lg);overflow:hidden;background:#d7e4df;box-shadow:var(--shadow)}
+.courtPhoto img{width:100%;height:100%;object-fit:cover}
+.aboutCopy .lead{max-width:520px;margin:24px 0 0}
+.featureGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}
+.feature{border-top:1px solid var(--line);padding:16px 4px 3px}
+.feature span{display:block;font-size:10px;color:#8aa500;font-weight:900;letter-spacing:.13em;margin-bottom:7px}
+.feature b{font-size:13px;line-height:1.45}
+
+.booking{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.booking:before{content:"";position:absolute;right:-180px;top:-220px;width:520px;height:520px;border-radius:50%;background:rgba(201,243,29,.12)}
+.booking .kicker{color:var(--lime)}
+.bookingHead{position:relative;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
+.bookingHead .lead{max-width:500px;color:#aab4b5;margin:0}
+.priceGrid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.priceBox{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.055);border-radius:20px;padding:24px}
+.priceBox small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#98a3a4;font-weight:850}
+.priceBox strong{display:block;font-size:34px;letter-spacing:-.045em;margin:8px 0 7px}
+.priceBox p{margin:0;color:#aeb7b8;font-size:12px;line-height:1.5}
+.callPanel{position:relative;z-index:2;margin-top:16px;border-radius:26px;background:var(--lime);color:#111819;padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.callPanel small{font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.callPanel h3{font-size:clamp(28px,4vw,46px);letter-spacing:-.045em;margin:7px 0 0;line-height:1}
+.callPanel p{margin:11px 0 0;color:#4b5700;font-size:13px}
+.callPanel .btn{background:#111819;color:#fff;white-space:nowrap}
+
+.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
+.sectionHead .lead{max-width:510px;margin:0}
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.videoCard{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 14px 35px rgba(32,48,47,.05);transition:.22s ease}
+.videoCard:hover{transform:translateY(-3px);box-shadow:0 20px 42px rgba(32,48,47,.09)}
+.thumb{height:210px;overflow:hidden;position:relative;background:#d8e2de}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:.3s ease}
+.videoCard:hover .thumb img{transform:scale(1.035)}
+.play{position:absolute;left:16px;bottom:16px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;place-items:center;box-shadow:0 9px 25px rgba(0,0,0,.18)}
+.play:before{content:"";width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid #111819;margin-left:3px}
+.videoMeta{padding:18px 18px 21px}
+.videoMeta small{font-size:10px;color:#8b9698;font-weight:800;letter-spacing:.10em;text-transform:uppercase}
+.videoMeta h3{font-size:18px;line-height:1.28;margin:9px 0 0;letter-spacing:-.02em}
+.quickInfo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
+.quickCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:21px}
+.quickCard span{display:block;font-size:10px;color:#8fa900;letter-spacing:.12em;font-weight:900;margin-bottom:12px}
+.quickCard h3{font-size:16px;margin:0 0 8px}
+.quickCard p{font-size:12px;color:#6e797b;line-height:1.55;margin:0}
+.quickCard a{display:inline-block;margin-top:13px;font-size:11px;font-weight:900;text-decoration:none;border-bottom:1px solid #a6c31c}
+
+.rules{background:#eef1e9}
+.rulesGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:17px;padding:0 18px}
+summary{list-style:none;cursor:pointer;padding:19px 0;font-size:14px;font-weight:850;display:flex;align-items:center;justify-content:space-between;gap:15px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:22px;color:#91ad00;font-weight:500}
+details[open] summary:after{content:"−"}
+details p{margin:0;padding:0 0 19px;color:#6d787a;font-size:13px;line-height:1.65}
+
+.projectsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.projectLink{min-height:190px;border-radius:22px;border:1px solid var(--line);background:#fff;padding:25px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;transition:.2s ease;overflow:hidden;position:relative}
+.projectLink:nth-child(2){background:#e9ff83;border-color:#d0e957}
+.projectLink:nth-child(3){background:#161e20;color:#fff;border-color:#161e20}
+.projectLink:hover{transform:translateY(-3px)}
+.projectLink small{font-size:9px;font-weight:850;letter-spacing:.15em;text-transform:uppercase;color:#7c8789}
+.projectLink:nth-child(2) small{color:#667000}.projectLink:nth-child(3) small{color:#a6b0b1}
+.projectLink h3{font-size:28px;letter-spacing:-.045em;line-height:1;margin:0}
+.projectLink b{font-size:24px;align-self:flex-end}
+
+.final{padding:72px 0 92px}
+.finalPanel{border-radius:32px;background:linear-gradient(125deg,#d4fb34,#b8e600);padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;box-shadow:var(--shadow)}
+.finalPanel small{font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.finalPanel h2{font-size:clamp(38px,5vw,64px);letter-spacing:-.06em;line-height:.94;margin:9px 0 0}
+.finalPhone{display:inline-block;margin-top:16px;font-size:22px;font-weight:900;text-decoration:none}
+.finalPanel .btn{background:#111819;color:#fff;white-space:nowrap}
+
+footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:20px;color:#788386;font-size:11px}
+.footer strong{color:#263032}
+.footer a{text-decoration:none;font-weight:800;color:#263032}
+
+@media(max-width:920px){
+ .wrap{width:min(100% - 30px,720px)}
+ .nav{height:72px}.navlinks,.navbtn{display:none}.menu{display:block}
+ .mobileDrawer{position:fixed;z-index:49;top:72px;left:15px;right:15px;background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:18px;padding:12px 17px;box-shadow:var(--shadow)}
+ .mobileDrawer.open{display:grid}
+ .mobileDrawer a{text-decoration:none;padding:13px 5px;border-bottom:1px solid var(--line);font-size:11px;font-weight:850;text-transform:uppercase}
+ .mobileDrawer a:last-child{border-bottom:0;color:#779100}
+ .hero{padding-top:102px}
+ .heroGrid,.aboutGrid{grid-template-columns:1fr;gap:30px}
+ .heroCopy{padding:10px 0 0}
+ .heroVisual{height:500px}
+ .heroNumbers{grid-template-columns:repeat(3,1fr)}
+ .courtPhoto{height:400px;order:2}
+ .aboutCopy{order:1}
+ section{padding:70px 0}
+ .bookingHead,.sectionHead{display:block}
+ .bookingHead .lead,.sectionHead .lead{margin-top:18px}
+ .priceGrid,.videos,.quickInfo,.projectsGrid{grid-template-columns:1fr}
+ .callPanel{align-items:flex-start;flex-direction:column}
+ .rulesGrid{grid-template-columns:1fr}
+ .finalPanel{display:block;padding:36px 28px}.finalPanel .btn{margin-top:24px}
+ .footer{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:520px){
+ .wrap{width:calc(100% - 24px)}
+ .wordmark{font-size:18px}.brand small{font-size:8px}
+ .hero{padding:94px 0 30px}
+ .display{font-size:clamp(48px,15vw,70px)}
+ .heroCopy p{font-size:15px;margin-top:20px}
+ .heroActions{display:block}.heroActions .btn{width:100%}.phoneInline{display:inline-block;margin-top:7px}
+ .heroFacts{gap:7px;margin-top:22px}.factChip{font-size:10px;padding:9px 11px}
+ .heroVisual{height:430px;border-radius:24px}
+ .heroNumbers{left:10px;right:10px;bottom:10px;gap:5px}
+ .heroNumber{padding:11px 9px;border-radius:12px}.heroNumber strong{font-size:16px}.heroNumber small{font-size:8px}
+ .heroBadge{top:11px;left:11px;font-size:8px}
+ .courtPhoto{height:300px;border-radius:24px}
+ .featureGrid{grid-template-columns:1fr}
+ .sectionTitle{font-size:42px}
+ .priceBox{padding:20px}.priceBox strong{font-size:30px}
+ .callPanel{padding:26px 22px}.callPanel h3{font-size:32px}.callPanel .btn{width:100%}
+ .thumb{height:195px}
+ .projectLink{min-height:160px}.projectLink h3{font-size:25px}
+ .finalPanel{padding:30px 22px;border-radius:24px}.finalPhone{font-size:18px}.finalPanel .btn{width:100%}
+}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Падел — Империя туризма">
+      <span><span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span><small>Империя туризма · Катунь</small></span>
+    </a>
+    <nav class="navlinks" aria-label="Навигация">
+      <a href="#court">О корте</a>
+      <a href="#prices">Цены</a>
+      <a href="#lessons">Обучение</a>
+      <a href="#rules">Правила</a>
+      <a href="#projects">Рядом</a>
+    </nav>
+    <a class="btn navbtn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
+    <button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  </div>
+</header>
+<div class="mobileDrawer" id="drawer">
+  <a href="#court">О корте</a>
+  <a href="#prices">Цены</a>
+  <a href="#lessons">Обучение</a>
+  <a href="#rules">Правила</a>
+  <a href="#projects">Рядом</a>
+  <a href="tel:+79039120022">Позвонить администратору ↗</a>
+</div>
+
+<main>
+<section class="hero">
+  <div class="wrap heroGrid">
+    <div class="heroCopy">
+      <div class="kicker heroKicker">Империя туризма · Горный Алтай</div>
+      <h1 class="display"><span class="heroTitleMain accent">ПАДЕЛ</span><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
+      <p class="heroDesc">Профессиональный падел-корт среди сосен и гор. Для первой игры, матча с друзьями или полноценной тренировки.</p>
+      <div class="heroActions">
+        <a class="btn" href="tel:+79039120022">Позвонить и забронировать <span class="arrow">↗</span></a>
+        <a class="phoneInline js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
+      </div>
+      <div class="heroFacts">
+        <span class="factChip">Ежедневно, круглосуточно</span>
+        <span class="factChip">1–4 игрока</span>
+        <span class="factChip">Ракетки на месте</span>
+      </div>
+    </div>
+    <div class="heroVisual">
+      <img class="heroImage" src="https://www.imperia-tur.com/images/special/006.webp" onerror="this.onerror=null;this.src='assets/images/court-wide.webp'" alt="Падел-корт на территории Империи туризма">
+      <div class="heroBadge">Ая · Горный Алтай</div>
+      <div class="heroNumbers">
+        <div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div>
+        <div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div>
+        <div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="court">
+  <div class="wrap aboutGrid">
+    <div class="courtPhoto"><img src="assets/images/court-wide.webp" alt="Падел-корт в Горном Алтае" loading="lazy"></div>
+    <div class="aboutCopy">
+      <div class="kicker">01 / О корте</div>
+      <h2 class="sectionTitle">Падел среди<br>сосен Алтая</h2>
+      <p class="lead">Динамичная игра, в которой сочетаются элементы тенниса и сквоша. Порог входа невысокий: можно прийти без опыта, быстро понять базовые правила и уже с первой игры получить удовольствие.</p>
+      <div class="featureGrid">
+        <div class="feature"><span>01</span><b>Профессиональный корт со стеклянными бортами</b></div>
+        <div class="feature"><span>02</span><b>Свежий горный воздух и сосновый лес вокруг</b></div>
+        <div class="feature"><span>03</span><b>Подходит для друзей, пар и семейной игры</b></div>
+        <div class="feature"><span>04</span><b>Ракетки можно арендовать на месте</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="prices">
+  <div class="wrap">
+    <div class="bookingHead">
+      <div><div class="kicker">02 / Цены и бронь</div><h2 class="sectionTitle">Бронь — одним звонком</h2></div>
+      <p class="lead">Расписания на сайте нет: свободное время сразу подскажет администратор. Позвоните, назовите удобное время и подтвердите игру.</p>
+    </div>
+    <div class="priceGrid">
+      <div class="priceBox"><small>Аренда корта</small><strong id="courtPriceMain">3 500 ₽</strong><p>за 1 час игры</p></div>
+      <div class="priceBox"><small>Аренда ракетки</small><strong id="racketPriceMain">500 ₽</strong><p>за 1 час · на месте</p></div>
+      <div class="priceBox"><small>Режим работы</small><strong id="hoursPrice">24/7</strong><p>ежедневно · круглосуточно</p></div>
+    </div>
+    <div class="callPanel">
+      <div><small>Бронирование по телефону</small><h3 class="js-phone">+7 903 912-00-22</h3><p>Администратор подскажет свободное время и ответит на вопросы.</p></div>
+      <a class="btn dark" href="tel:+79039120022">Позвонить администратору <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="kicker">03 / Обучение</div><h2 class="sectionTitle">Быстрый старт</h2></div>
+      <p class="lead">Три понятных русскоязычных видео: базовые правила, подача и игра от стекла — то, что пригодится перед первой игрой.</p>
+    </div>
+    <div class="videos">
+      <a class="videoCard" href="https://rutube.ru/video/2b3ed57061b28e5c4156542093daf93a/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="assets/images/lesson-start.webp" alt="Падел для начинающих" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Падел для начинающих: всё за 10 минут</h3></div>
+      </a>
+      <a class="videoCard" href="https://rutube.ru/video/209c143f3e4814421bff107bf935e53e/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="assets/images/lesson-serve.webp" alt="Ошибки на подаче в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Подача: 5 главных ошибок новичка</h3></div>
+      </a>
+      <a class="videoCard" href="https://rutube.ru/video/190f182ee9fc0b5c77f5d04b206602e9/" target="_blank" rel="noopener">
+        <div class="thumb"><img src="assets/images/lesson-glass.webp" alt="Игра от стекла в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Как понять отскок от стекла</h3></div>
+      </a>
+    </div>
+    <div class="quickInfo">
+      <div class="quickCard"><span>01</span><h3>Правила</h3><p>Коротко о счёте, подаче, стенах и базовой логике игры.</p><a href="#rules">Читать правила ↗</a></div>
+      <div class="quickCard"><span>02</span><h3>Бронь по телефону</h3><p>Свободное время и бронь подтверждает администратор.</p><a class="js-phone-link js-phone" href="tel:+79039120022">+7 903 912-00-22 ↗</a></div>
+      <div class="quickCard"><span>03</span><h3>Что взять</h3><p>Спортивную форму и удобную обувь. Ракетку можно арендовать на месте.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules" id="rules">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="kicker">04 / Правила</div><h2 class="sectionTitle">Перед первой игрой</h2></div>
+      <p class="lead">Самое важное без перегруза теорией. Этого достаточно, чтобы уверенно выйти на корт.</p>
+    </div>
+    <div class="rulesGrid">
+      <details open><summary>Основные правила</summary><p>Обычно играют 2×2. Мяч можно отбивать после одного отскока от покрытия. После отскока разрешена игра от стеклянной стены.</p></details>
+      <details><summary>Подача</summary><p>Подача выполняется снизу после отскока мяча от земли. Мяч направляют по диагонали в противоположный квадрат подачи.</p></details>
+      <details><summary>Счёт</summary><p>Чаще всего используется теннисная система счёта: 15, 30, 40, гейм. Формат конкретной игры можно заранее согласовать между игроками.</p></details>
+      <details><summary>Что взять с собой</summary><p>Спортивную форму и удобную обувь. Ракетки можно арендовать на месте, поэтому для первой игры свой инвентарь не обязателен.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sectionHead">
+      <div><div class="kicker">05 / Рядом</div><h2 class="sectionTitle">Империя туризма</h2></div>
+      <p class="lead">После игры можно остаться на базе, зайти в ресторан или продолжить вечер в клубе.</p>
+    </div>
+    <div class="projectsGrid">
+      <a class="projectLink" href="https://imperia-tur.com/" target="_blank" rel="noopener"><small>База отдыха</small><h3>Империя<br>туризма</h3><b>↗</b></a>
+      <a class="projectLink" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><small>Ресторан</small><h3>Сытый<br>кролик</h3><b>↗</b></a>
+      <a class="projectLink" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><small>Ночной клуб</small><h3>Империя</h3><b>↗</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="finalPanel">
+      <div><small>Готовы сыграть?</small><h2>Забронируйте<br>корт по телефону</h2><a class="finalPhone js-phone" href="tel:+79039120022">+7 903 912-00-22</a></div>
+      <a class="btn dark" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer">
+    <div><strong>ПАДЕЛ · АЛТАЙ</strong> · Империя туризма</div>
+    <div class="js-address">Горный Алтай · Катунь</div>
+    <a class="js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const fmtPrice=v=>{
+    const n=Number(v);
+    if(!Number.isFinite(n)) return String(v||'');
+    return new Intl.NumberFormat('ru-RU').format(n).replace(/\u00a0/g,' ')+' ₽';
+  };
+  const setText=(sel,val)=>{if(val===undefined||val===null||val==='')return;const el=document.querySelector(sel);if(el)el.textContent=val};
+  const setAll=(sel,val)=>{if(val===undefined||val===null||val==='')return;document.querySelectorAll(sel).forEach(el=>el.textContent=val)};
+  fetch('content.json?v='+Date.now(),{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error();return r.json()})
+    .then(c=>{
+      if(c.hero){
+        // Migrate the old demo defaults without forcing the user to overwrite content.json.
+        if(c.hero.eyebrow && c.hero.eyebrow!=='Горный Алтай · Катунь') setText('.heroKicker',c.hero.eyebrow);
+        if(c.hero.title && c.hero.title!=='PADEL') setText('.heroTitleMain',c.hero.title);
+        if(c.hero.subtitle && c.hero.subtitle!=='КОРТ НА КАТУНИ') setText('.heroTitleSub',c.hero.subtitle);
+        if(c.hero.description && c.hero.description!=='Профессиональный падел-корт на территории «Империи туризма» — для первой игры, матча с друзьями или полноценной тренировки.') setText('.heroDesc',c.hero.description);
+        if(c.hero.image){const img=document.querySelector('.heroImage');if(img)img.src=c.hero.image+(c.hero.image.includes('?')?'&':'?')+'v='+Date.now()}
+      }
+      if(c.pricing){
+        setText('#hoursMain',c.pricing.hours);setText('#hoursPrice',c.pricing.hours);
+        setText('#courtPriceHero',fmtPrice(c.pricing.courtPrice));setText('#courtPriceMain',fmtPrice(c.pricing.courtPrice));
+        setText('#racketPriceHero',fmtPrice(c.pricing.racketPrice));setText('#racketPriceMain',fmtPrice(c.pricing.racketPrice));
+        if(c.pricing.players){const chips=document.querySelectorAll('.factChip');if(chips[1])chips[1].textContent=c.pricing.players+' игрока'}
+      }
+      if(c.contacts){
+        const phone=c.contacts.phone||'';
+        const href='tel:'+(c.contacts.phoneHref||'').replace(/[^\d+]/g,'');
+        if(href!=='tel:')document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href=href);
+        if(phone){
+          document.querySelectorAll('.js-phone').forEach(el=>{
+            el.textContent=el.classList.contains('js-phone-link')?phone+' ↗':phone;
+          });
+        }
+        setText('.js-address',c.contacts.address);
+      }
+    }).catch(()=>{});
+})();
+
+const menu=document.getElementById('menu');
+const drawer=document.getElementById('drawer');
+if(menu&&drawer){
+  menu.addEventListener('click',()=>{const open=drawer.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{drawer.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+}
+</script>
+</body>
+</html>
