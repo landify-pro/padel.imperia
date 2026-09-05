@@ -79,7 +79,7 @@ section{padding:92px 0}
 .about{padding-top:58px}
 .aboutGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}
 .aboutMedia{position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:560px;background:#dfe7dd;box-shadow:var(--shadow)}
-.aboutMedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.aboutMedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
 .aboutMedia:after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(180deg,transparent,rgba(9,12,12,.50));}
 .mediaStamp{position:absolute;z-index:2;left:20px;bottom:20px;background:rgba(255,255,255,.92);border-radius:20px;padding:18px 18px 16px;min-width:245px;box-shadow:0 18px 36px rgba(20,28,28,.14)}
 .mediaStamp strong{display:block;font-size:38px;line-height:1;letter-spacing:-.06em}
@@ -205,10 +205,10 @@ footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
   .heroOverlayCopy{margin-bottom:0}
   .heroOverlayCopy small{font-size:9px}
   .heroOverlayCopy h2{display:none}
-  .heroNumbers{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
-  .heroNumber{padding:13px 12px 11px}
+  .heroNumbers{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:14px}
+  .heroNumber{padding:14px 14px 12px}
   .heroNumber:nth-child(3){display:none}
-  .heroNumber strong{font-size:20px}
+  .heroNumber strong{font-size:22px}
   .mediaStamp{left:14px;bottom:14px;min-width:210px;padding:16px}
   .mediaStamp strong{font-size:30px}
   .priceBox strong{font-size:32px}
@@ -226,18 +226,12 @@ footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
 <body id="top">
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Падел — Империя туризма">
-      <span><span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span><small>Империя туризма · Катунь</small></span>
-    </a>
-    <nav class="navlinks">
-      <a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a>
-    </nav>
+    <a class="brand" href="#top" aria-label="Падел — Империя туризма"><span><span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span><small>Империя туризма · Катунь</small></span></a>
+    <nav class="navlinks"><a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a></nav>
     <a class="btn navbtn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
     <button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </div>
-  <div class="mobileDrawer" id="drawer">
-    <a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a><a href="tel:+79039120022">Позвонить</a>
-  </div>
+  <div class="mobileDrawer" id="drawer"><a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a><a href="tel:+79039120022">Позвонить</a></div>
 </header>
 <main>
 <section class="hero">
@@ -250,18 +244,15 @@ footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
       <div class="heroFacts"><span class="factChip">Ежедневно, круглосуточно</span><span class="factChip">1–4 игрока</span><span class="factChip">Ракетки на месте</span></div>
     </div>
     <div class="heroVisual">
-      <img class="heroImage" src="https://landify-pro.github.io/imperiya.rest/assets/images/padel-court.webp" alt="Падел-корт на территории Империи туризма">
+      <img class="heroImage" src="assets/images/court-hero.jpg" alt="Падел-корт на территории Империи туризма">
       <div class="heroBadge">Ая · Горный Алтай</div>
-      <div class="heroOverlay">
-        <div class="heroOverlayCopy"><small>Падел на территории базы</small><h2>Корт с настоящим видом на Алтай</h2></div>
-        <div class="heroNumbers"><div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div><div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div><div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div></div>
-      </div>
+      <div class="heroOverlay"><div class="heroOverlayCopy"><small>Падел на территории базы</small><h2>Корт с настоящим видом на Алтай</h2></div><div class="heroNumbers"><div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div><div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div><div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div></div></div>
     </div>
   </div>
 </section>
 <section class="about" id="court">
   <div class="wrap aboutGrid">
-    <div class="aboutMedia"><img src="https://www.imperia-tur.com/images/special/006.webp" alt="Ракетка и корт Padel Altay" loading="lazy"><div class="mediaStamp"><strong>Катунь</strong><span>корт находится на территории базы «Империя туризма» в Горном Алтае</span></div></div>
+    <div class="aboutMedia"><img src="assets/images/racket-close.jpg" alt="Ракетка и корт Padel Altay" loading="lazy"><div class="mediaStamp"><strong>Катунь</strong><span>корт находится на территории базы «Империя туризма» в Горном Алтае</span></div></div>
     <div class="aboutCopy"><div class="kicker">01 / О корте</div><h2 class="sectionTitle">Падел среди<br>сосен Алтая</h2><p class="lead">Падел объединяет элементы тенниса и сквоша, но стартовать в нём намного проще. Даже без опыта можно быстро понять механику игры, войти в ритм и уже в первый же час получить настоящее удовольствие от матча.</p><div class="featureGrid"><div class="feature"><span>01</span><b>Профессиональный корт со стеклянными бортами и комфортным покрытием</b></div><div class="feature"><span>02</span><b>Локация внутри базы отдыха — удобно совместить игру, ресторан и проживание</b></div><div class="feature"><span>03</span><b>Формат подходит новичкам, парам, друзьям и семейным компаниям</b></div><div class="feature"><span>04</span><b>Ракетки можно взять на месте, поэтому не нужен свой инвентарь</b></div></div></div>
   </div>
 </section>
