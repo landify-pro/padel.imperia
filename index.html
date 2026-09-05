@@ -40,7 +40,6 @@ img{display:block;max-width:100%}
 .btn.dark:hover{background:#232d2e}
 .arrow{font-size:17px;line-height:1}
 .pill{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid var(--line);padding:10px 14px;background:rgba(255,255,255,.75);font-size:11px;font-weight:850;color:#4f5b5c}
-
 header{position:sticky;z-index:100;top:0;background:rgba(245,246,240,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-2)}
 .nav{height:82px;display:flex;align-items:center;gap:30px}
 .brand{display:flex;align-items:center;text-decoration:none;margin-right:auto}
@@ -53,7 +52,6 @@ header{position:sticky;z-index:100;top:0;background:rgba(245,246,240,.88);backdr
 .navbtn{padding:14px 18px}
 .menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-size:21px;cursor:pointer}
 .mobileDrawer{display:none}
-
 main{overflow:hidden}
 .hero{padding:44px 0 42px;position:relative}
 .heroLayout{display:grid;grid-template-columns:minmax(320px,540px) 1fr;gap:28px;align-items:stretch}
@@ -69,15 +67,14 @@ main{overflow:hidden}
 .heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,22,20,.08) 0%,rgba(10,15,14,.20) 45%,rgba(10,14,14,.72) 100%);z-index:1}
 .heroVisual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
 .heroBadge{position:absolute;z-index:2;left:20px;top:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:10px 13px;font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
-.heroOverlay{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.heroOverlay{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;display:grid;grid-template-columns:1fr;gap:16px;align-items:end}
 .heroOverlayCopy{max-width:420px;color:#fff}
 .heroOverlayCopy small{display:block;font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 .heroOverlayCopy h2{font-size:clamp(30px,4vw,54px);letter-spacing:-.055em;line-height:.94;margin:8px 0 0}
-.heroNumbers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;min-width:min(440px,100%)}
+.heroNumbers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;min-width:0}
 .heroNumber{padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 8px 25px rgba(0,0,0,.10)}
 .heroNumber small{display:block;color:#778183;font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:900}
 .heroNumber strong{display:block;margin-top:6px;font-size:20px;letter-spacing:-.04em}
-
 section{padding:92px 0}
 .about{padding-top:58px}
 .aboutGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}
@@ -92,7 +89,6 @@ section{padding:92px 0}
 .feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 8px 24px rgba(35,48,47,.04)}
 .feature span{display:block;font-size:10px;color:#8aa500;font-weight:900;letter-spacing:.14em;margin-bottom:10px}
 .feature b{font-size:14px;line-height:1.5}
-
 .booking{background:linear-gradient(180deg,#101719 0%,#0d1315 100%);color:#fff;position:relative;overflow:hidden}
 .booking:before{content:"";position:absolute;right:-170px;top:-150px;width:500px;height:500px;border-radius:50%;background:rgba(202,243,29,.10);filter:blur(2px)}
 .booking:after{content:"";position:absolute;left:-120px;bottom:-180px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.03)}
@@ -109,7 +105,6 @@ section{padding:92px 0}
 .callPanel h3{font-size:clamp(32px,4vw,52px);letter-spacing:-.05em;margin:8px 0 0;line-height:1}
 .callPanel p{margin:10px 0 0;color:#4a5800;font-size:14px;line-height:1.55;max-width:560px}
 .callPanel .btn{background:#111819;color:#fff;white-space:nowrap;align-self:end}
-
 .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
 .sectionHead .lead{max-width:510px;margin:0}
 .learn{padding-top:76px}
@@ -124,7 +119,6 @@ section{padding:92px 0}
 .videoMeta{padding:18px 18px 21px}
 .videoMeta small{font-size:10px;color:#8b9698;font-weight:900;letter-spacing:.10em;text-transform:uppercase}
 .videoMeta h3{font-size:18px;line-height:1.3;margin:10px 0 0;letter-spacing:-.025em}
-
 .rules{background:var(--sand)}
 .rulesGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;counter-reset:rule}
 details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 18px;box-shadow:0 10px 24px rgba(35,48,47,.04)}
@@ -134,7 +128,6 @@ summary:before{counter-increment:rule;content:"0" counter(rule);margin-right:aut
 summary:after{content:"+";font-size:22px;color:#91ad00;font-weight:500;line-height:1}
 details[open] summary:after{content:"−"}
 details p{margin:0;padding:0 0 20px;color:#687375;font-size:13px;line-height:1.68}
-
 .projects .sectionHead{margin-bottom:24px}
 .projectsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .projectLink{min-height:240px;border-radius:24px;overflow:hidden;text-decoration:none;position:relative;display:flex;align-items:flex-end;padding:22px;border:1px solid var(--line);background:#fff;box-shadow:0 16px 34px rgba(30,42,41,.05);transition:.22s ease}
@@ -149,7 +142,6 @@ details p{margin:0;padding:0 0 20px;color:#687375;font-size:13px;line-height:1.6
 .projectLink.restaurant:before{background:linear-gradient(180deg,rgba(93,108,18,.08),rgba(85,102,0,.58));}
 .projectLink.club{background:url('https://landify-pro.github.io/imperiya.rest/assets/images/club-atmosphere.webp') center/cover no-repeat}
 .projectLink.club:before{background:linear-gradient(180deg,rgba(9,12,12,.10),rgba(9,12,12,.36));}
-
 .final{padding:74px 0 96px}
 .finalPanel{position:relative;border-radius:34px;overflow:hidden;min-height:300px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;padding:40px;background:#0f1718;box-shadow:var(--shadow)}
 .finalPanel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
@@ -161,11 +153,9 @@ details p{margin:0;padding:0 0 20px;color:#687375;font-size:13px;line-height:1.6
 .finalPhone{display:inline-block;margin-top:18px;font-size:26px;font-weight:900;text-decoration:none;color:var(--lime)}
 .finalPanel .btn{align-self:end;background:#fff;color:#111819}
 .finalPanel .btn:hover{background:#f1f5e3}
-
 footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
 .footer{display:flex;align-items:center;justify-content:space-between;gap:20px;color:#788386;font-size:11px}
 .footer strong{color:#263032}.footer a{text-decoration:none;font-weight:800;color:#263032}
-
 @media (max-width: 1060px){
   .heroLayout,.aboutGrid,.bookingHead{grid-template-columns:1fr;gap:30px}
   .heroVisual{min-height:620px}
@@ -237,31 +227,18 @@ footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Падел — Империя туризма">
-      <span>
-        <span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span>
-        <small>Империя туризма · Катунь</small>
-      </span>
+      <span><span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span><small>Империя туризма · Катунь</small></span>
     </a>
     <nav class="navlinks">
-      <a href="#court">О корте</a>
-      <a href="#prices">Цены</a>
-      <a href="#lessons">Обучение</a>
-      <a href="#rules">Правила</a>
-      <a href="#projects">Рядом</a>
+      <a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a>
     </nav>
     <a class="btn navbtn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
     <button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </div>
   <div class="mobileDrawer" id="drawer">
-    <a href="#court">О корте</a>
-    <a href="#prices">Цены</a>
-    <a href="#lessons">Обучение</a>
-    <a href="#rules">Правила</a>
-    <a href="#projects">Рядом</a>
-    <a href="tel:+79039120022">Позвонить</a>
+    <a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a><a href="tel:+79039120022">Позвонить</a>
   </div>
 </header>
-
 <main>
 <section class="hero">
   <div class="wrap heroLayout">
@@ -269,201 +246,64 @@ footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
       <div class="kicker heroKicker">Империя туризма · Горный Алтай</div>
       <h1 class="heroTitle"><span class="heroTitleMain accent">ПАДЕЛ</span><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
       <p class="heroDesc">Профессиональный падел-корт среди гор и сосен. Подойдёт для первой игры, матча с друзьями и полноценной тренировки на базе «Империя туризма».</p>
-      <div class="heroActions">
-        <a class="btn" href="tel:+79039120022">Позвонить и забронировать <span class="arrow">↗</span></a>
-        <a class="phoneInline js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
-      </div>
-      <div class="heroFacts">
-        <span class="factChip">Ежедневно, круглосуточно</span>
-        <span class="factChip">1–4 игрока</span>
-        <span class="factChip">Ракетки на месте</span>
-      </div>
+      <div class="heroActions"><a class="btn" href="tel:+79039120022">Позвонить и забронировать <span class="arrow">↗</span></a><a class="phoneInline js-phone" href="tel:+79039120022">+7 903 912-00-22</a></div>
+      <div class="heroFacts"><span class="factChip">Ежедневно, круглосуточно</span><span class="factChip">1–4 игрока</span><span class="factChip">Ракетки на месте</span></div>
     </div>
     <div class="heroVisual">
       <img class="heroImage" src="https://landify-pro.github.io/imperiya.rest/assets/images/padel-court.webp" alt="Падел-корт на территории Империи туризма">
       <div class="heroBadge">Ая · Горный Алтай</div>
       <div class="heroOverlay">
-        <div class="heroOverlayCopy">
-          <small>Падел на территории базы</small>
-          <h2>Корт с настоящим видом на Алтай</h2>
-        </div>
-        <div class="heroNumbers">
-          <div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div>
-          <div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div>
-          <div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div>
-        </div>
+        <div class="heroOverlayCopy"><small>Падел на территории базы</small><h2>Корт с настоящим видом на Алтай</h2></div>
+        <div class="heroNumbers"><div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div><div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div><div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div></div>
       </div>
     </div>
   </div>
 </section>
-
 <section class="about" id="court">
   <div class="wrap aboutGrid">
-    <div class="aboutMedia">
-      <img src="https://www.imperia-tur.com/images/special/006.webp" alt="Ракетка и корт Padel Altay" loading="lazy">
-      <div class="mediaStamp">
-        <strong>Катунь</strong>
-        <span>корт находится на территории базы «Империя туризма» в Горном Алтае</span>
-      </div>
-    </div>
-    <div class="aboutCopy">
-      <div class="kicker">01 / О корте</div>
-      <h2 class="sectionTitle">Падел среди<br>сосен Алтая</h2>
-      <p class="lead">Падел объединяет элементы тенниса и сквоша, но стартовать в нём намного проще. Даже без опыта можно быстро понять механику игры, войти в ритм и уже в первый же час получить настоящее удовольствие от матча.</p>
-      <div class="featureGrid">
-        <div class="feature"><span>01</span><b>Профессиональный корт со стеклянными бортами и комфортным покрытием</b></div>
-        <div class="feature"><span>02</span><b>Локация внутри базы отдыха — удобно совместить игру, ресторан и проживание</b></div>
-        <div class="feature"><span>03</span><b>Формат подходит новичкам, парам, друзьям и семейным компаниям</b></div>
-        <div class="feature"><span>04</span><b>Ракетки можно взять на месте, поэтому не нужен свой инвентарь</b></div>
-      </div>
-    </div>
+    <div class="aboutMedia"><img src="https://www.imperia-tur.com/images/special/006.webp" alt="Ракетка и корт Padel Altay" loading="lazy"><div class="mediaStamp"><strong>Катунь</strong><span>корт находится на территории базы «Империя туризма» в Горном Алтае</span></div></div>
+    <div class="aboutCopy"><div class="kicker">01 / О корте</div><h2 class="sectionTitle">Падел среди<br>сосен Алтая</h2><p class="lead">Падел объединяет элементы тенниса и сквоша, но стартовать в нём намного проще. Даже без опыта можно быстро понять механику игры, войти в ритм и уже в первый же час получить настоящее удовольствие от матча.</p><div class="featureGrid"><div class="feature"><span>01</span><b>Профессиональный корт со стеклянными бортами и комфортным покрытием</b></div><div class="feature"><span>02</span><b>Локация внутри базы отдыха — удобно совместить игру, ресторан и проживание</b></div><div class="feature"><span>03</span><b>Формат подходит новичкам, парам, друзьям и семейным компаниям</b></div><div class="feature"><span>04</span><b>Ракетки можно взять на месте, поэтому не нужен свой инвентарь</b></div></div></div>
   </div>
 </section>
-
 <section class="booking" id="prices">
   <div class="wrap">
-    <div class="bookingHead">
-      <div>
-        <div class="kicker">02 / Цены и бронь</div>
-        <h2 class="sectionTitle">Бронь — одним звонком</h2>
-      </div>
-      <p class="lead">Никаких сложных форм и расписаний на сайте. Просто позвоните администратору, назовите удобное время — и вам сразу подскажут свободный слот.</p>
-    </div>
-    <div class="priceGrid">
-      <div class="priceBox"><small>Аренда корта</small><strong id="courtPriceMain">3 500 ₽</strong><p>за 1 час игры на падел-корте</p></div>
-      <div class="priceBox"><small>Аренда ракетки</small><strong id="racketPriceMain">500 ₽</strong><p>за 1 час · инвентарь выдаётся на месте</p></div>
-      <div class="priceBox"><small>Режим работы</small><strong id="hoursPrice">24/7</strong><p>корт доступен ежедневно, бронирование — по телефону</p></div>
-    </div>
-    <div class="callPanel">
-      <div>
-        <small>Бронирование по телефону</small>
-        <h3 class="js-phone">+7 903 912-00-22</h3>
-        <p>Если играете впервые — тоже звоните. Подскажут по времени, количеству игроков и аренде ракеток.</p>
-      </div>
-      <a class="btn dark" href="tel:+79039120022">Позвонить администратору <span class="arrow">↗</span></a>
-    </div>
+    <div class="bookingHead"><div><div class="kicker">02 / Цены и бронь</div><h2 class="sectionTitle">Бронь — одним звонком</h2></div><p class="lead">Никаких сложных форм и расписаний на сайте. Просто позвоните администратору, назовите удобное время — и вам сразу подскажут свободный слот.</p></div>
+    <div class="priceGrid"><div class="priceBox"><small>Аренда корта</small><strong id="courtPriceMain">3 500 ₽</strong><p>за 1 час игры на падел-корте</p></div><div class="priceBox"><small>Аренда ракетки</small><strong id="racketPriceMain">500 ₽</strong><p>за 1 час · инвентарь выдаётся на месте</p></div><div class="priceBox"><small>Режим работы</small><strong id="hoursPrice">24/7</strong><p>корт доступен ежедневно, бронирование — по телефону</p></div></div>
+    <div class="callPanel"><div><small>Бронирование по телефону</small><h3 class="js-phone">+7 903 912-00-22</h3><p>Если играете впервые — тоже звоните. Подскажут по времени, количеству игроков и аренде ракеток.</p></div><a class="btn dark" href="tel:+79039120022">Позвонить администратору <span class="arrow">↗</span></a></div>
   </div>
 </section>
-
 <section class="learn" id="lessons">
   <div class="wrap">
-    <div class="sectionHead">
-      <div><div class="kicker">03 / Обучение</div><h2 class="sectionTitle">Быстрый старт</h2></div>
-      <p class="lead">Три коротких видео, которые помогут перед первой игрой: базовые правила, подача и понимание отскока от стекла.</p>
-    </div>
+    <div class="sectionHead"><div><div class="kicker">03 / Обучение</div><h2 class="sectionTitle">Быстрый старт</h2></div><p class="lead">Три коротких видео, которые помогут перед первой игрой: базовые правила, подача и понимание отскока от стекла.</p></div>
     <div class="videos">
-      <a class="videoCard" href="https://rutube.ru/video/2b3ed57061b28e5c4156542093daf93a/" target="_blank" rel="noopener">
-        <div class="thumb"><img src="assets/images/lesson-start.webp" alt="Падел для начинающих" loading="lazy"><span class="play" aria-hidden="true"></span></div>
-        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Падел для начинающих: всё за 10 минут</h3></div>
-      </a>
-      <a class="videoCard" href="https://rutube.ru/video/209c143f3e4814421bff107bf935e53e/" target="_blank" rel="noopener">
-        <div class="thumb"><img src="assets/images/lesson-serve.webp" alt="Ошибки на подаче в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div>
-        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Подача: 5 частых ошибок новичка</h3></div>
-      </a>
-      <a class="videoCard" href="https://rutube.ru/video/190f182ee9fc0b5c77f5d04b206602e9/" target="_blank" rel="noopener">
-        <div class="thumb"><img src="assets/images/lesson-glass.webp" alt="Игра от стекла в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div>
-        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Как читать отскок от стекла</h3></div>
-      </a>
+      <a class="videoCard" href="https://rutube.ru/video/2b3ed57061b28e5c4156542093daf93a/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/lesson-start.webp" alt="Падел для начинающих" loading="lazy"><span class="play"></span></div><div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Падел для начинающих: всё за 10 минут</h3></div></a>
+      <a class="videoCard" href="https://rutube.ru/video/209c143f3e4814421bff107bf935e53e/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/lesson-serve.webp" alt="Ошибки на подаче в паделе" loading="lazy"><span class="play"></span></div><div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Подача: 5 частых ошибок новичка</h3></div></a>
+      <a class="videoCard" href="https://rutube.ru/video/190f182ee9fc0b5c77f5d04b206602e9/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/lesson-glass.webp" alt="Игра от стекла в паделе" loading="lazy"><span class="play"></span></div><div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Как читать отскок от стекла</h3></div></a>
     </div>
   </div>
 </section>
-
 <section class="rules" id="rules">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div><div class="kicker">04 / Правила</div><h2 class="sectionTitle">Перед первой игрой</h2></div>
-      <p class="lead">Самое важное — без лишней теории. Этого достаточно, чтобы уверенно выйти на корт и начать играть.</p>
-    </div>
-    <div class="rulesGrid">
-      <details open><summary>Основные правила</summary><p>Обычно играют в формате 2×2. Мяч отбивают после одного отскока от покрытия. После этого разрешено использовать стеклянные стены — это часть игровой механики падела.</p></details>
-      <details><summary>Подача</summary><p>Подача выполняется снизу после отскока мяча от земли. Мяч направляется по диагонали в противоположный квадрат подачи.</p></details>
-      <details><summary>Счёт</summary><p>Чаще всего используется теннисная система: 15, 30, 40, гейм. Перед матчем игроки могут договориться о формате и количестве сетов.</p></details>
-      <details><summary>Что взять с собой</summary><p>Подойдёт спортивная форма и обувь с удобной подошвой. Для первой игры свой инвентарь не обязателен — ракетки можно взять на месте.</p></details>
-    </div>
-  </div>
+  <div class="wrap"><div class="sectionHead"><div><div class="kicker">04 / Правила</div><h2 class="sectionTitle">Перед первой игрой</h2></div><p class="lead">Самое важное — без лишней теории. Этого достаточно, чтобы уверенно выйти на корт и начать играть.</p></div><div class="rulesGrid"><details open><summary>Основные правила</summary><p>Обычно играют в формате 2×2. Мяч отбивают после одного отскока от покрытия. После этого разрешено использовать стеклянные стены — это часть игровой механики падела.</p></details><details><summary>Подача</summary><p>Подача выполняется снизу после отскока мяча от земли. Мяч направляется по диагонали в противоположный квадрат подачи.</p></details><details><summary>Счёт</summary><p>Чаще всего используется теннисная система: 15, 30, 40, гейм. Перед матчем игроки могут договориться о формате и количестве сетов.</p></details><details><summary>Что взять с собой</summary><p>Подойдёт спортивная форма и обувь с удобной подошвой. Для первой игры свой инвентарь не обязателен — ракетки можно взять на месте.</p></details></div></div>
 </section>
-
 <section class="projects" id="projects">
-  <div class="wrap">
-    <div class="sectionHead">
-      <div><div class="kicker">05 / Рядом</div><h2 class="sectionTitle">Империя туризма</h2></div>
-      <p class="lead">После игры можно остаться на базе, сходить в ресторан или продолжить вечер в клубе.</p>
-    </div>
-    <div class="projectsGrid">
-      <a class="projectLink base" href="https://imperia-tur.com/" target="_blank" rel="noopener"><div><small>База отдыха</small><h3>Империя<br>туризма</h3></div><b>↗</b></a>
-      <a class="projectLink restaurant" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><div><small>Ресторан</small><h3>Сытый<br>кролик</h3></div><b>↗</b></a>
-      <a class="projectLink club" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><div><small>Ночной клуб</small><h3>Империя</h3></div><b>↗</b></a>
-    </div>
-  </div>
+  <div class="wrap"><div class="sectionHead"><div><div class="kicker">05 / Рядом</div><h2 class="sectionTitle">Империя туризма</h2></div><p class="lead">После игры можно остаться на базе, сходить в ресторан или продолжить вечер в клубе.</p></div><div class="projectsGrid"><a class="projectLink base" href="https://imperia-tur.com/" target="_blank" rel="noopener"><div><small>База отдыха</small><h3>Империя<br>туризма</h3></div><b>↗</b></a><a class="projectLink restaurant" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><div><small>Ресторан</small><h3>Сытый<br>кролик</h3></div><b>↗</b></a><a class="projectLink club" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><div><small>Ночной клуб</small><h3>Империя</h3></div><b>↗</b></a></div></div>
 </section>
-
 <section class="final">
-  <div class="wrap">
-    <div class="finalPanel">
-      <img src="https://landify-pro.github.io/imperiya.rest/assets/images/padel-court.webp" alt="Падел-корт на Катуни" loading="lazy">
-      <div class="finalText">
-        <small>Готовы сыграть?</small>
-        <h2>Забронируйте корт по телефону</h2>
-        <p>Играете впервые или уже знаете удобное время — просто позвоните. Подскажем по брони, количеству игроков и аренде инвентаря.</p>
-        <a class="finalPhone js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
-      </div>
-      <a class="btn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
-    </div>
-  </div>
+  <div class="wrap"><div class="finalPanel"><img src="https://landify-pro.github.io/imperiya.rest/assets/images/padel-court.webp" alt="Падел-корт на Катуни" loading="lazy"><div class="finalText"><small>Готовы сыграть?</small><h2>Забронируйте корт по телефону</h2><p>Играете впервые или уже знаете удобное время — просто позвоните. Подскажем по брони, количеству игроков и аренде инвентаря.</p><a class="finalPhone js-phone" href="tel:+79039120022">+7 903 912-00-22</a></div><a class="btn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a></div></div>
 </section>
 </main>
-
-<footer>
-  <div class="wrap footer">
-    <div><strong>ПАДЕЛ · АЛТАЙ</strong> · Империя туризма</div>
-    <div class="js-address">Горный Алтай · Катунь</div>
-    <a class="js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
-  </div>
-</footer>
-
+<footer><div class="wrap footer"><div><strong>ПАДЕЛ · АЛТАЙ</strong> · Империя туризма</div><div class="js-address">Горный Алтай · Катунь</div><a class="js-phone" href="tel:+79039120022">+7 903 912-00-22</a></div></footer>
 <script>
 (function(){
-  const fmtPrice=v=>{
-    const n=Number(v);
-    if(!Number.isFinite(n)) return String(v||'');
-    return new Intl.NumberFormat('ru-RU').format(n).replace(/\u00a0/g,' ')+' ₽';
-  };
+  const fmtPrice=v=>{const n=Number(v);if(!Number.isFinite(n)) return String(v||'');return new Intl.NumberFormat('ru-RU').format(n).replace(/\u00a0/g,' ')+' ₽';};
   const setText=(sel,val)=>{if(val===undefined||val===null||val==='')return;const el=document.querySelector(sel);if(el)el.textContent=val};
-  fetch('content.json?v='+Date.now(),{cache:'no-store'})
-    .then(r=>{if(!r.ok)throw new Error();return r.json()})
-    .then(c=>{
-      if(c.hero){
-        if(c.hero.eyebrow && c.hero.eyebrow!=='Горный Алтай · Катунь') setText('.heroKicker',c.hero.eyebrow);
-        if(c.hero.title && c.hero.title!=='PADEL') setText('.heroTitleMain',c.hero.title);
-        if(c.hero.subtitle && c.hero.subtitle!=='КОРТ НА КАТУНИ') setText('.heroTitleSub',c.hero.subtitle);
-        if(c.hero.description && c.hero.description!=='Профессиональный падел-корт на территории «Империи туризма» — для первой игры, матча с друзьями или полноценной тренировки.') setText('.heroDesc',c.hero.description);
-        if(c.hero.image){const img=document.querySelector('.heroImage');if(img)img.src=c.hero.image+(c.hero.image.includes('?')?'&':'?')+'v='+Date.now()}
-      }
-      if(c.pricing){
-        setText('#hoursMain',c.pricing.hours);setText('#hoursPrice',c.pricing.hours);
-        setText('#courtPriceHero',fmtPrice(c.pricing.courtPrice));setText('#courtPriceMain',fmtPrice(c.pricing.courtPrice));
-        setText('#racketPriceHero',fmtPrice(c.pricing.racketPrice));setText('#racketPriceMain',fmtPrice(c.pricing.racketPrice));
-        if(c.pricing.players){const chips=document.querySelectorAll('.factChip');if(chips[1])chips[1].textContent=c.pricing.players+' игрока'}
-      }
-      if(c.contacts){
-        const phone=c.contacts.phone||'';
-        const href='tel:'+(c.contacts.phoneHref||'').replace(/[^\d+]/g,'');
-        if(href!=='tel:')document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href=href);
-        if(phone){
-          document.querySelectorAll('.js-phone').forEach(el=>{
-            el.textContent=el.classList.contains('js-phone-link')?phone+' ↗':phone;
-          });
-        }
-        setText('.js-address',c.contacts.address);
-      }
-    }).catch(()=>{});
+  fetch('content.json?v='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error();return r.json()}).then(c=>{
+    if(c.hero){if(c.hero.eyebrow) setText('.heroKicker',c.hero.eyebrow);if(c.hero.title) setText('.heroTitleMain',c.hero.title);if(c.hero.subtitle) setText('.heroTitleSub',c.hero.subtitle);if(c.hero.description) setText('.heroDesc',c.hero.description);if(c.hero.image){const img=document.querySelector('.heroImage');if(img)img.src=c.hero.image+(c.hero.image.includes('?')?'&':'?')+'v='+Date.now()}}
+    if(c.pricing){setText('#hoursMain',c.pricing.hours);setText('#hoursPrice',c.pricing.hours);setText('#courtPriceHero',fmtPrice(c.pricing.courtPrice));setText('#courtPriceMain',fmtPrice(c.pricing.courtPrice));setText('#racketPriceHero',fmtPrice(c.pricing.racketPrice));setText('#racketPriceMain',fmtPrice(c.pricing.racketPrice));if(c.pricing.players){const chips=document.querySelectorAll('.factChip');if(chips[1])chips[1].textContent=c.pricing.players+' игрока'}}
+    if(c.contacts){const phone=c.contacts.phone||'';const href='tel:'+(c.contacts.phoneHref||'').replace(/[^\d+]/g,'');if(href!=='tel:')document.querySelectorAll('a[href^="tel:"]').forEach(a=>a.href=href);if(phone)document.querySelectorAll('.js-phone').forEach(el=>el.textContent=phone);setText('.js-address',c.contacts.address)}
+  }).catch(()=>{});
 })();
-const menu=document.getElementById('menu');
-const drawer=document.getElementById('drawer');
-if(menu&&drawer){
-  menu.addEventListener('click',()=>{const open=drawer.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});
-  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{drawer.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
-}
+const menu=document.getElementById('menu'),drawer=document.getElementById('drawer');if(menu&&drawer){menu.addEventListener('click',()=>{const open=drawer.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false')});drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{drawer.classList.remove('open');menu.setAttribute('aria-expanded','false')}));}
 </script>
 </body>
 </html>
