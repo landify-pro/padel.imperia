@@ -9,187 +9,233 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 :root{
-  --bg:#f4f5ef;
-  --paper:#fff;
+  --bg:#f3f4ed;
+  --paper:#ffffff;
   --ink:#111819;
-  --muted:#687375;
+  --muted:#667274;
   --line:rgba(17,24,25,.10);
-  --lime:#c9f31d;
-  --lime-strong:#afd800;
-  --dark:#101718;
+  --line-2:rgba(17,24,25,.06);
+  --lime:#caf31d;
+  --lime-deep:#b6e000;
+  --dark:#11181a;
+  --sand:#ecf0e3;
   --shadow:0 24px 70px rgba(26,43,42,.10);
-  --r-lg:32px;
-  --r-md:20px;
+  --r-xl:34px;
+  --r-lg:26px;
+  --r-md:18px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
 a{color:inherit}
-button,a{-webkit-tap-highlight-color:transparent}
+a,button{-webkit-tap-highlight-color:transparent}
 img{display:block;max-width:100%}
-.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
-.kicker{font-size:11px;line-height:1.3;font-weight:850;letter-spacing:.20em;text-transform:uppercase;color:#718600}
-.display{font-size:clamp(50px,6.3vw,92px);line-height:.91;letter-spacing:-.065em;margin:15px 0 0;font-weight:900}
-.display .accent{color:#9fc400}
-.sectionTitle{font-size:clamp(38px,4.6vw,66px);line-height:.96;letter-spacing:-.055em;margin:12px 0 0;font-weight:850}
-.lead{font-size:16px;line-height:1.7;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;border:0;border-radius:14px;background:var(--lime);color:#0e1415;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;padding:17px 20px;transition:.2s ease;cursor:pointer}
+.wrap{width:min(1220px,calc(100% - 48px));margin:auto}
+.kicker{font-size:11px;line-height:1.3;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#7f9800}
+.sectionTitle{font-size:clamp(36px,4.9vw,72px);line-height:.95;letter-spacing:-.06em;margin:10px 0 0;font-weight:950}
+.lead{font-size:16px;line-height:1.72;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;border:0;border-radius:16px;background:var(--lime);color:#111819;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;padding:18px 22px;transition:.2s ease;cursor:pointer;box-shadow:0 14px 28px rgba(164,195,20,.18)}
 .btn:hover{background:#d6ff2b;transform:translateY(-1px)}
-.btn.dark{background:var(--dark);color:#fff}
-.btn.dark:hover{background:#202a2b}
+.btn.dark{background:var(--dark);color:#fff;box-shadow:none}
+.btn.dark:hover{background:#232d2e}
 .arrow{font-size:17px;line-height:1}
 
-header{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(246,247,242,.91);backdrop-filter:blur(18px);border-bottom:1px solid rgba(17,24,25,.06)}
-.nav{height:78px;display:flex;align-items:center;gap:28px}
-.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto;gap:13px}
-.wordmark{font-size:20px;font-weight:950;letter-spacing:-.045em;line-height:1}
-.wordmark i{font-style:normal;color:#98ba00}
-.brand small{display:block;margin-top:5px;color:#7c8789;font-size:9px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+header{position:sticky;z-index:100;top:0;background:rgba(245,246,240,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-2)}
+.nav{height:82px;display:flex;align-items:center;gap:30px}
+.brand{display:flex;align-items:center;text-decoration:none;margin-right:auto;gap:14px}
+.brandMark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--dark);color:var(--lime);font-size:12px;font-weight:900;letter-spacing:.06em;box-shadow:inset 0 0 0 2px rgba(255,255,255,.04)}
+.wordmark{font-size:22px;font-weight:950;letter-spacing:-.045em;line-height:1}
+.wordmark i{font-style:normal;color:#96b600}
+.brand small{display:block;margin-top:6px;color:#6f7a7c;font-size:10px;font-weight:850;letter-spacing:.15em;text-transform:uppercase}
 .navlinks{display:flex;gap:24px}
-.navlinks a{text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:850;letter-spacing:.08em}
-.navlinks a:hover{color:#789200}
-.navbtn{padding:13px 17px}
-.menu{display:none;width:43px;height:43px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font-size:21px;cursor:pointer}
+.navlinks a{text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:850;letter-spacing:.09em;color:#20292a}
+.navlinks a:hover{color:#819900}
+.navbtn{padding:14px 18px}
+.menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-size:21px;cursor:pointer}
 .mobileDrawer{display:none}
 
-.hero{padding:122px 0 48px;position:relative;overflow:hidden;background:linear-gradient(180deg,#fbfcf8 0%,#f1f4eb 100%)}
-.hero:before{content:"";position:absolute;width:620px;height:620px;right:-300px;top:40px;border-radius:50%;background:rgba(201,243,29,.10);filter:blur(2px)}
-.heroGrid{position:relative;z-index:2;display:grid;grid-template-columns:1.03fr .97fr;gap:58px;align-items:center}
-.heroCopy{padding:36px 0 26px}
-.heroCopy p{max-width:600px;margin:24px 0 0;font-size:17px;line-height:1.7;color:#606c6e}
-.heroActions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:30px}
-.phoneInline{text-decoration:none;font-size:14px;font-weight:850;border-bottom:1px solid rgba(17,24,25,.22);padding:11px 0}
-.heroFacts{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}
-.factChip{border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:999px;padding:10px 13px;font-size:11px;font-weight:800;color:#4f5b5c}
-.heroVisual{height:620px;border-radius:var(--r-lg);overflow:hidden;position:relative;background:#d8e6dd;box-shadow:var(--shadow)}
-.heroVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(8,14,14,.62) 100%);pointer-events:none}
-.heroVisual img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
-.heroBadge{position:absolute;z-index:2;top:18px;left:18px;background:rgba(255,255,255,.91);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:10px 13px;font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
-.heroNumbers{position:absolute;z-index:2;left:20px;right:20px;bottom:19px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.heroNumber{padding:14px 13px;border-radius:15px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
-.heroNumber small{display:block;color:#778183;font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
-.heroNumber strong{display:block;margin-top:5px;font-size:20px;letter-spacing:-.035em}
+main{overflow:hidden}
+.hero{padding:44px 0 42px;position:relative}
+.heroLayout{display:grid;grid-template-columns:minmax(320px,540px) 1fr;gap:28px;align-items:stretch}
+.heroCopy{padding:44px 0 34px}
+.heroTitle{font-size:clamp(54px,7.4vw,118px);line-height:.88;letter-spacing:-.075em;margin:16px 0 0;font-weight:950}
+.heroTitle .accent{color:#9abc00}
+.heroDesc{max-width:480px;margin:22px 0 0;font-size:17px;line-height:1.75;color:#5e686a}
+.heroActions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:32px}
+.phoneInline{text-decoration:none;font-size:15px;font-weight:900;border-bottom:1px solid rgba(17,24,25,.20);padding:11px 0}
+.heroFacts{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.heroFacts .factChip{display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--line);padding:10px 14px;background:rgba(255,255,255,.82);font-size:11px;font-weight:850;color:#536062}
+.heroVisual{position:relative;border-radius:var(--r-xl);min-height:650px;overflow:hidden;box-shadow:var(--shadow);background:#dfead9}
+.heroVisual:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,22,20,.08) 0%,rgba(10,15,14,.20) 45%,rgba(10,14,14,.72) 100%);z-index:1}
+.heroVisual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+.heroBadge{position:absolute;z-index:2;left:20px;top:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:10px 13px;font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.heroOverlay{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.heroOverlayCopy{max-width:420px;color:#fff}
+.heroOverlayCopy small{display:block;font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.heroOverlayCopy h2{font-size:clamp(30px,4vw,54px);letter-spacing:-.055em;line-height:.94;margin:8px 0 0}
+.heroNumbers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;min-width:min(440px,100%)}
+.heroNumber{padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 8px 25px rgba(0,0,0,.10)}
+.heroNumber small{display:block;color:#778183;font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:900}
+.heroNumber strong{display:block;margin-top:6px;font-size:20px;letter-spacing:-.04em}
 
-section{padding:88px 0}
-.aboutGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
-.courtPhoto{height:500px;border-radius:var(--r-lg);overflow:hidden;background:#d7e4df;box-shadow:var(--shadow)}
-.courtPhoto img{width:100%;height:100%;object-fit:cover}
+section{padding:92px 0}
+.about{padding-top:58px}
+.aboutGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}
+.aboutMedia{position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:560px;background:#dfe7dd;box-shadow:var(--shadow)}
+.aboutMedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.aboutMedia:after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(180deg,transparent,rgba(9,12,12,.50));}
+.mediaStamp{position:absolute;z-index:2;left:20px;bottom:20px;background:rgba(255,255,255,.92);border-radius:20px;padding:18px 18px 16px;min-width:245px;box-shadow:0 18px 36px rgba(20,28,28,.14)}
+.mediaStamp strong{display:block;font-size:38px;line-height:1;letter-spacing:-.06em}
+.mediaStamp span{display:block;margin-top:8px;font-size:12px;line-height:1.45;color:#5d6869}
 .aboutCopy .lead{max-width:520px;margin:24px 0 0}
-.featureGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}
-.feature{border-top:1px solid var(--line);padding:16px 4px 3px}
-.feature span{display:block;font-size:10px;color:#8aa500;font-weight:900;letter-spacing:.13em;margin-bottom:7px}
-.feature b{font-size:13px;line-height:1.45}
+.featureGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;box-shadow:0 8px 24px rgba(35,48,47,.04)}
+.feature span{display:block;font-size:10px;color:#8aa500;font-weight:900;letter-spacing:.14em;margin-bottom:10px}
+.feature b{font-size:14px;line-height:1.5}
 
-.booking{background:var(--dark);color:#fff;position:relative;overflow:hidden}
-.booking:before{content:"";position:absolute;right:-180px;top:-220px;width:520px;height:520px;border-radius:50%;background:rgba(201,243,29,.12)}
+.booking{background:linear-gradient(180deg,#101719 0%,#0d1315 100%);color:#fff;position:relative;overflow:hidden}
+.booking:before{content:"";position:absolute;right:-170px;top:-150px;width:500px;height:500px;border-radius:50%;background:rgba(202,243,29,.10);filter:blur(2px)}
+.booking:after{content:"";position:absolute;left:-120px;bottom:-180px;width:360px;height:360px;border-radius:50%;background:rgba(255,255,255,.03)}
 .booking .kicker{color:var(--lime)}
-.bookingHead{position:relative;z-index:2;display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
-.bookingHead .lead{max-width:500px;color:#aab4b5;margin:0}
+.bookingHead{position:relative;z-index:2;display:grid;grid-template-columns:1fr 410px;gap:36px;align-items:end;margin-bottom:36px}
+.bookingHead .lead{max-width:410px;color:#aab4b5;margin:0}
 .priceGrid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.priceBox{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.055);border-radius:20px;padding:24px}
-.priceBox small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#98a3a4;font-weight:850}
-.priceBox strong{display:block;font-size:34px;letter-spacing:-.045em;margin:8px 0 7px}
-.priceBox p{margin:0;color:#aeb7b8;font-size:12px;line-height:1.5}
-.callPanel{position:relative;z-index:2;margin-top:16px;border-radius:26px;background:var(--lime);color:#111819;padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.callPanel small{font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.callPanel h3{font-size:clamp(28px,4vw,46px);letter-spacing:-.045em;margin:7px 0 0;line-height:1}
-.callPanel p{margin:11px 0 0;color:#4b5700;font-size:13px}
-.callPanel .btn{background:#111819;color:#fff;white-space:nowrap}
+.priceBox{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.04);border-radius:22px;padding:25px 22px 22px}
+.priceBox small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#99a4a5;font-weight:900}
+.priceBox strong{display:block;font-size:38px;letter-spacing:-.045em;margin:10px 0 8px}
+.priceBox p{margin:0;color:#b0b9ba;font-size:13px;line-height:1.55}
+.callPanel{position:relative;z-index:2;margin-top:14px;border-radius:28px;background:linear-gradient(135deg,#d3fb34,#b7e400);color:#111819;padding:34px 36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.callPanel small{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.callPanel h3{font-size:clamp(32px,4vw,52px);letter-spacing:-.05em;margin:8px 0 0;line-height:1}
+.callPanel p{margin:10px 0 0;color:#4a5800;font-size:14px;line-height:1.55;max-width:560px}
+.callPanel .btn{background:#111819;color:#fff;white-space:nowrap;align-self:end}
 
 .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:34px}
 .sectionHead .lead{max-width:510px;margin:0}
+.learn{padding-top:76px}
 .videos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.videoCard{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 14px 35px rgba(32,48,47,.05);transition:.22s ease}
-.videoCard:hover{transform:translateY(-3px);box-shadow:0 20px 42px rgba(32,48,47,.09)}
-.thumb{height:210px;overflow:hidden;position:relative;background:#d8e2de}
+.videoCard{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 16px 36px rgba(30,42,41,.06);transition:.22s ease}
+.videoCard:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(30,42,41,.10)}
+.thumb{height:220px;overflow:hidden;position:relative;background:#d8e2de}
 .thumb img{width:100%;height:100%;object-fit:cover;transition:.3s ease}
-.videoCard:hover .thumb img{transform:scale(1.035)}
-.play{position:absolute;left:16px;bottom:16px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;place-items:center;box-shadow:0 9px 25px rgba(0,0,0,.18)}
-.play:before{content:"";width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid #111819;margin-left:3px}
+.videoCard:hover .thumb img{transform:scale(1.04)}
+.play{position:absolute;left:16px;bottom:16px;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 9px 25px rgba(0,0,0,.18)}
+.play:before{content:"";width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:13px solid #111819;margin-left:3px}
 .videoMeta{padding:18px 18px 21px}
-.videoMeta small{font-size:10px;color:#8b9698;font-weight:800;letter-spacing:.10em;text-transform:uppercase}
-.videoMeta h3{font-size:18px;line-height:1.28;margin:9px 0 0;letter-spacing:-.02em}
-.quickInfo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}
-.quickCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:21px}
+.videoMeta small{font-size:10px;color:#8b9698;font-weight:900;letter-spacing:.10em;text-transform:uppercase}
+.videoMeta h3{font-size:18px;line-height:1.3;margin:10px 0 0;letter-spacing:-.025em}
+.quickInfo{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.quickCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 18px 19px}
 .quickCard span{display:block;font-size:10px;color:#8fa900;letter-spacing:.12em;font-weight:900;margin-bottom:12px}
 .quickCard h3{font-size:16px;margin:0 0 8px}
-.quickCard p{font-size:12px;color:#6e797b;line-height:1.55;margin:0}
-.quickCard a{display:inline-block;margin-top:13px;font-size:11px;font-weight:900;text-decoration:none;border-bottom:1px solid #a6c31c}
+.quickCard p{font-size:13px;color:#6e797b;line-height:1.58;margin:0}
+.quickCard a{display:inline-block;margin-top:14px;font-size:11px;font-weight:900;text-decoration:none;border-bottom:1px solid #a6c31c}
 
-.rules{background:#eef1e9}
-.rulesGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-details{background:#fff;border:1px solid var(--line);border-radius:17px;padding:0 18px}
-summary{list-style:none;cursor:pointer;padding:19px 0;font-size:14px;font-weight:850;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.rules{background:var(--sand)}
+.rulesGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;counter-reset:rule}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 18px;box-shadow:0 10px 24px rgba(35,48,47,.04)}
+summary{list-style:none;cursor:pointer;padding:20px 0;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:space-between;gap:15px}
 summary::-webkit-details-marker{display:none}
-summary:after{content:"+";font-size:22px;color:#91ad00;font-weight:500}
+summary:before{counter-increment:rule;content:"0" counter(rule);margin-right:auto;color:#9ab800;font-size:11px;font-weight:900;letter-spacing:.14em;min-width:32px}
+summary:after{content:"+";font-size:22px;color:#91ad00;font-weight:500;line-height:1}
 details[open] summary:after{content:"−"}
-details p{margin:0;padding:0 0 19px;color:#6d787a;font-size:13px;line-height:1.65}
+details p{margin:0;padding:0 0 20px;color:#687375;font-size:13px;line-height:1.68}
 
-.projectsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.projectLink{min-height:190px;border-radius:22px;border:1px solid var(--line);background:#fff;padding:25px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;transition:.2s ease;overflow:hidden;position:relative}
-.projectLink:nth-child(2){background:#e9ff83;border-color:#d0e957}
-.projectLink:nth-child(3){background:#161e20;color:#fff;border-color:#161e20}
+.projects .sectionHead{margin-bottom:24px}
+.projectsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.projectLink{min-height:240px;border-radius:24px;overflow:hidden;text-decoration:none;position:relative;display:flex;align-items:flex-end;padding:22px;border:1px solid var(--line);background:#fff;box-shadow:0 16px 34px rgba(30,42,41,.05);transition:.22s ease}
 .projectLink:hover{transform:translateY(-3px)}
-.projectLink small{font-size:9px;font-weight:850;letter-spacing:.15em;text-transform:uppercase;color:#7c8789}
-.projectLink:nth-child(2) small{color:#667000}.projectLink:nth-child(3) small{color:#a6b0b1}
-.projectLink h3{font-size:28px;letter-spacing:-.045em;line-height:1;margin:0}
-.projectLink b{font-size:24px;align-self:flex-end}
+.projectLink:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,15,14,.08),rgba(10,15,14,.74));z-index:1}
+.projectLink > *{position:relative;z-index:2}
+.projectLink small{display:block;font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.78)}
+.projectLink h3{font-size:34px;letter-spacing:-.055em;line-height:.95;margin:10px 0 0;color:#fff}
+.projectLink b{position:absolute;right:18px;bottom:18px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);color:#fff;font-size:18px}
+.projectLink.base{background:url('https://raw.githubusercontent.com/landify-pro/imperiya.rest/main/assets/images/base-at-night.webp') center/cover no-repeat}
+.projectLink.restaurant{background:url('https://raw.githubusercontent.com/landify-pro/imperiya.rest/main/assets/images/restaurant-atmosphere.webp') center/cover no-repeat}
+.projectLink.restaurant:before{background:linear-gradient(180deg,rgba(93,108,18,.08),rgba(85,102,0,.58));}
+.projectLink.club{background:url('https://raw.githubusercontent.com/landify-pro/imperiya.rest/main/assets/images/club-atmosphere.webp') center/cover no-repeat}
+.projectLink.club:before{background:linear-gradient(180deg,rgba(9,12,12,.10),rgba(9,12,12,.36));}
 
-.final{padding:72px 0 92px}
-.finalPanel{border-radius:32px;background:linear-gradient(125deg,#d4fb34,#b8e600);padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;box-shadow:var(--shadow)}
-.finalPanel small{font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
-.finalPanel h2{font-size:clamp(38px,5vw,64px);letter-spacing:-.06em;line-height:.94;margin:9px 0 0}
-.finalPhone{display:inline-block;margin-top:16px;font-size:22px;font-weight:900;text-decoration:none}
-.finalPanel .btn{background:#111819;color:#fff;white-space:nowrap}
+.final{padding:74px 0 96px}
+.finalPanel{position:relative;border-radius:34px;overflow:hidden;min-height:300px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;padding:40px;background:#0f1718;box-shadow:var(--shadow)}
+.finalPanel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.finalPanel:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,14,14,.80) 0%,rgba(10,14,14,.52) 45%,rgba(10,14,14,.30) 100%);z-index:1}
+.finalPanel > *{position:relative;z-index:2}
+.finalPanel small{font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.finalPanel h2{font-size:clamp(40px,5vw,68px);letter-spacing:-.06em;line-height:.94;margin:10px 0 0;color:#fff}
+.finalText p{max-width:500px;margin:18px 0 0;color:rgba(255,255,255,.78);font-size:15px;line-height:1.72}
+.finalPhone{display:inline-block;margin-top:18px;font-size:26px;font-weight:900;text-decoration:none;color:var(--lime)}
+.finalPanel .btn{align-self:end;background:#fff;color:#111819}
+.finalPanel .btn:hover{background:#f1f5e3}
 
-footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
+footer{border-top:1px solid var(--line);padding:26px 0 34px;background:#fafbf7}
 .footer{display:flex;align-items:center;justify-content:space-between;gap:20px;color:#788386;font-size:11px}
-.footer strong{color:#263032}
-.footer a{text-decoration:none;font-weight:800;color:#263032}
+.footer strong{color:#263032}.footer a{text-decoration:none;font-weight:800;color:#263032}
 
-@media(max-width:920px){
- .wrap{width:min(100% - 30px,720px)}
- .nav{height:72px}.navlinks,.navbtn{display:none}.menu{display:block}
- .mobileDrawer{position:fixed;z-index:49;top:72px;left:15px;right:15px;background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:18px;padding:12px 17px;box-shadow:var(--shadow)}
- .mobileDrawer.open{display:grid}
- .mobileDrawer a{text-decoration:none;padding:13px 5px;border-bottom:1px solid var(--line);font-size:11px;font-weight:850;text-transform:uppercase}
- .mobileDrawer a:last-child{border-bottom:0;color:#779100}
- .hero{padding-top:102px}
- .heroGrid,.aboutGrid{grid-template-columns:1fr;gap:30px}
- .heroCopy{padding:10px 0 0}
- .heroVisual{height:500px}
- .heroNumbers{grid-template-columns:repeat(3,1fr)}
- .courtPhoto{height:400px;order:2}
- .aboutCopy{order:1}
- section{padding:70px 0}
- .bookingHead,.sectionHead{display:block}
- .bookingHead .lead,.sectionHead .lead{margin-top:18px}
- .priceGrid,.videos,.quickInfo,.projectsGrid{grid-template-columns:1fr}
- .callPanel{align-items:flex-start;flex-direction:column}
- .rulesGrid{grid-template-columns:1fr}
- .finalPanel{display:block;padding:36px 28px}.finalPanel .btn{margin-top:24px}
- .footer{flex-direction:column;align-items:flex-start}
+@media (max-width: 1060px){
+  .heroLayout,.aboutGrid,.bookingHead{grid-template-columns:1fr;gap:30px}
+  .heroVisual{min-height:620px}
+  .bookingHead .lead{max-width:none}
 }
-@media(max-width:520px){
- .wrap{width:calc(100% - 24px)}
- .wordmark{font-size:18px}.brand small{font-size:8px}
- .hero{padding:94px 0 30px}
- .display{font-size:clamp(48px,15vw,70px)}
- .heroCopy p{font-size:15px;margin-top:20px}
- .heroActions{display:block}.heroActions .btn{width:100%}.phoneInline{display:inline-block;margin-top:7px}
- .heroFacts{gap:7px;margin-top:22px}.factChip{font-size:10px;padding:9px 11px}
- .heroVisual{height:430px;border-radius:24px}
- .heroNumbers{left:10px;right:10px;bottom:10px;gap:5px}
- .heroNumber{padding:11px 9px;border-radius:12px}.heroNumber strong{font-size:16px}.heroNumber small{font-size:8px}
- .heroBadge{top:11px;left:11px;font-size:8px}
- .courtPhoto{height:300px;border-radius:24px}
- .featureGrid{grid-template-columns:1fr}
- .sectionTitle{font-size:42px}
- .priceBox{padding:20px}.priceBox strong{font-size:30px}
- .callPanel{padding:26px 22px}.callPanel h3{font-size:32px}.callPanel .btn{width:100%}
- .thumb{height:195px}
- .projectLink{min-height:160px}.projectLink h3{font-size:25px}
- .finalPanel{padding:30px 22px;border-radius:24px}.finalPhone{font-size:18px}.finalPanel .btn{width:100%}
+@media (max-width: 920px){
+  .wrap{width:min(100% - 30px,760px)}
+  .nav{height:74px}
+  .navlinks,.navbtn{display:none}
+  .menu{display:block}
+  .mobileDrawer{position:fixed;z-index:99;top:74px;left:15px;right:15px;background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:18px;padding:12px 17px;box-shadow:var(--shadow)}
+  .mobileDrawer.open{display:grid}
+  .mobileDrawer a{text-decoration:none;padding:13px 5px;border-bottom:1px solid var(--line);font-size:11px;font-weight:850;text-transform:uppercase}
+  .mobileDrawer a:last-child{border-bottom:0;color:#779100}
+  .hero{padding-top:24px}
+  .heroLayout{gap:24px}
+  .heroCopy{padding:6px 0 0}
+  .heroTitle{font-size:clamp(42px,14vw,82px)}
+  .heroDesc{font-size:16px;max-width:none}
+  .heroVisual{min-height:560px}
+  .heroOverlay{left:16px;right:16px;bottom:16px;display:block}
+  .heroOverlayCopy{max-width:none;margin-bottom:12px}
+  .heroOverlayCopy h2{font-size:30px}
+  .heroNumbers{min-width:0}
+  .about{padding-top:26px}
+  .aboutMedia{min-height:460px}
+  section{padding:74px 0}
+  .priceGrid,.videos,.quickInfo,.projectsGrid,.featureGrid,.rulesGrid{grid-template-columns:1fr}
+  .callPanel,.finalPanel{grid-template-columns:1fr}
+  .sectionHead{display:block}
+  .sectionHead .lead{margin-top:16px}
+  .finalPanel{min-height:0;padding:30px}
+  .footer{display:block;text-align:center}
+  .footer > * + *{margin-top:10px}
+}
+@media (max-width: 560px){
+  .wrap{width:calc(100% - 24px)}
+  .brandMark{width:32px;height:32px;font-size:10px}
+  .wordmark{font-size:18px}
+  .brand small{font-size:8px}
+  .heroTitle{font-size:15.5vw;line-height:.84}
+  .heroActions{display:grid;grid-template-columns:1fr;gap:12px}
+  .phoneInline{font-size:16px;border-bottom:0;padding:0}
+  .heroFacts{margin-top:18px}
+  .heroFacts .factChip:nth-child(2){display:none}
+  .heroVisual{min-height:500px}
+  .heroBadge{left:14px;top:14px;font-size:9px}
+  .heroOverlayCopy{margin-bottom:0}
+  .heroOverlayCopy small{font-size:9px}
+  .heroOverlayCopy h2{display:none}
+  .heroNumbers{display:grid;grid-template-columns:1fr;gap:8px;margin-top:14px}
+  .heroNumber{padding:14px 14px 12px}
+  .heroNumber strong{font-size:22px}
+  .mediaStamp{left:14px;bottom:14px;min-width:210px;padding:16px}
+  .mediaStamp strong{font-size:30px}
+  .priceBox strong{font-size:32px}
+  .callPanel{padding:24px 20px;border-radius:22px}
+  .callPanel h3{font-size:36px}
+  .thumb{height:180px}
+  .videoMeta h3{font-size:17px}
+  .projectLink{min-height:180px}
+  .projectLink h3{font-size:28px}
+  .finalPanel h2{font-size:42px}
+  .finalPhone{font-size:22px}
 }
 </style>
 </head>
@@ -197,9 +243,13 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Падел — Империя туризма">
-      <span><span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span><small>Империя туризма · Катунь</small></span>
+      <span class="brandMark">PA</span>
+      <span>
+        <span class="wordmark">ПАДЕЛ <i>АЛТАЙ</i></span>
+        <small>Империя туризма · Катунь</small>
+      </span>
     </a>
-    <nav class="navlinks" aria-label="Навигация">
+    <nav class="navlinks">
       <a href="#court">О корте</a>
       <a href="#prices">Цены</a>
       <a href="#lessons">Обучение</a>
@@ -209,23 +259,23 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
     <a class="btn navbtn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
     <button class="menu" id="menu" aria-label="Открыть меню" aria-expanded="false">☰</button>
   </div>
+  <div class="mobileDrawer" id="drawer">
+    <a href="#court">О корте</a>
+    <a href="#prices">Цены</a>
+    <a href="#lessons">Обучение</a>
+    <a href="#rules">Правила</a>
+    <a href="#projects">Рядом</a>
+    <a href="tel:+79039120022">Позвонить</a>
+  </div>
 </header>
-<div class="mobileDrawer" id="drawer">
-  <a href="#court">О корте</a>
-  <a href="#prices">Цены</a>
-  <a href="#lessons">Обучение</a>
-  <a href="#rules">Правила</a>
-  <a href="#projects">Рядом</a>
-  <a href="tel:+79039120022">Позвонить администратору ↗</a>
-</div>
 
 <main>
 <section class="hero">
-  <div class="wrap heroGrid">
+  <div class="wrap heroLayout">
     <div class="heroCopy">
       <div class="kicker heroKicker">Империя туризма · Горный Алтай</div>
-      <h1 class="display"><span class="heroTitleMain accent">ПАДЕЛ</span><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
-      <p class="heroDesc">Профессиональный падел-корт среди сосен и гор. Для первой игры, матча с друзьями или полноценной тренировки.</p>
+      <h1 class="heroTitle"><span class="heroTitleMain accent">ПАДЕЛ</span><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
+      <p class="heroDesc">Профессиональный падел-корт среди гор и сосен. Подойдёт для первой игры, матча с друзьями и спокойной спортивной тренировки на базе «Империя туризма».</p>
       <div class="heroActions">
         <a class="btn" href="tel:+79039120022">Позвонить и забронировать <span class="arrow">↗</span></a>
         <a class="phoneInline js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
@@ -237,29 +287,41 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
       </div>
     </div>
     <div class="heroVisual">
-      <img class="heroImage" src="https://www.imperia-tur.com/images/special/006.webp" onerror="this.onerror=null;this.src='assets/images/court-wide.webp'" alt="Падел-корт на территории Империи туризма">
+      <img class="heroImage" src="https://raw.githubusercontent.com/landify-pro/imperiya.rest/main/assets/images/padel-court.webp" onerror="this.onerror=null;this.src='assets/images/court-wide.webp'" alt="Падел-корт на территории Империи туризма">
       <div class="heroBadge">Ая · Горный Алтай</div>
-      <div class="heroNumbers">
-        <div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div>
-        <div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div>
-        <div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div>
+      <div class="heroOverlay">
+        <div class="heroOverlayCopy">
+          <small>Падел на территории базы</small>
+          <h2>Корт с настоящим видом на Алтай</h2>
+        </div>
+        <div class="heroNumbers">
+          <div class="heroNumber"><small>Режим</small><strong id="hoursMain">24/7</strong></div>
+          <div class="heroNumber"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div>
+          <div class="heroNumber"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="court">
+<section class="about" id="court">
   <div class="wrap aboutGrid">
-    <div class="courtPhoto"><img src="assets/images/court-wide.webp" alt="Падел-корт в Горном Алтае" loading="lazy"></div>
+    <div class="aboutMedia">
+      <img src="https://raw.githubusercontent.com/landify-pro/imperiya.rest/main/assets/images/katun-view.webp" onerror="this.onerror=null;this.src='assets/images/court-wide.webp'" alt="Вид на Катунь и Горный Алтай" loading="lazy">
+      <div class="mediaStamp">
+        <strong>1–4</strong>
+        <span>игрока на корте — можно прийти вдвоём, компанией или всей семьёй</span>
+      </div>
+    </div>
     <div class="aboutCopy">
       <div class="kicker">01 / О корте</div>
       <h2 class="sectionTitle">Падел среди<br>сосен Алтая</h2>
-      <p class="lead">Динамичная игра, в которой сочетаются элементы тенниса и сквоша. Порог входа невысокий: можно прийти без опыта, быстро понять базовые правила и уже с первой игры получить удовольствие.</p>
+      <p class="lead">Падел объединяет элементы тенниса и сквоша, но стартовать в нём намного проще. Даже без опыта можно быстро понять механику игры, войти в ритм и уже в первый же час получить настоящее удовольствие от матча.</p>
       <div class="featureGrid">
-        <div class="feature"><span>01</span><b>Профессиональный корт со стеклянными бортами</b></div>
-        <div class="feature"><span>02</span><b>Свежий горный воздух и сосновый лес вокруг</b></div>
-        <div class="feature"><span>03</span><b>Подходит для друзей, пар и семейной игры</b></div>
-        <div class="feature"><span>04</span><b>Ракетки можно арендовать на месте</b></div>
+        <div class="feature"><span>01</span><b>Профессиональный корт со стеклянными бортами и комфортным покрытием</b></div>
+        <div class="feature"><span>02</span><b>Локация внутри базы отдыха — удобно совместить игру, ресторан и проживание</b></div>
+        <div class="feature"><span>03</span><b>Формат подходит новичкам, парам, друзьям и семейным компаниям</b></div>
+        <div class="feature"><span>04</span><b>Ракетки можно взять на месте, поэтому не нужен свой инвентарь</b></div>
       </div>
     </div>
   </div>
@@ -268,26 +330,33 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
 <section class="booking" id="prices">
   <div class="wrap">
     <div class="bookingHead">
-      <div><div class="kicker">02 / Цены и бронь</div><h2 class="sectionTitle">Бронь — одним звонком</h2></div>
-      <p class="lead">Расписания на сайте нет: свободное время сразу подскажет администратор. Позвоните, назовите удобное время и подтвердите игру.</p>
+      <div>
+        <div class="kicker">02 / Цены и бронь</div>
+        <h2 class="sectionTitle">Бронь — одним звонком</h2>
+      </div>
+      <p class="lead">Никаких сложных форм и расписаний на сайте. Просто позвоните администратору, назовите удобное время — и вам сразу подскажут свободный слот.</p>
     </div>
     <div class="priceGrid">
-      <div class="priceBox"><small>Аренда корта</small><strong id="courtPriceMain">3 500 ₽</strong><p>за 1 час игры</p></div>
-      <div class="priceBox"><small>Аренда ракетки</small><strong id="racketPriceMain">500 ₽</strong><p>за 1 час · на месте</p></div>
-      <div class="priceBox"><small>Режим работы</small><strong id="hoursPrice">24/7</strong><p>ежедневно · круглосуточно</p></div>
+      <div class="priceBox"><small>Аренда корта</small><strong id="courtPriceMain">3 500 ₽</strong><p>за 1 час игры на падел-корте</p></div>
+      <div class="priceBox"><small>Аренда ракетки</small><strong id="racketPriceMain">500 ₽</strong><p>за 1 час · инвентарь выдаётся на месте</p></div>
+      <div class="priceBox"><small>Режим работы</small><strong id="hoursPrice">24/7</strong><p>корт доступен ежедневно, бронирование — по телефону</p></div>
     </div>
     <div class="callPanel">
-      <div><small>Бронирование по телефону</small><h3 class="js-phone">+7 903 912-00-22</h3><p>Администратор подскажет свободное время и ответит на вопросы.</p></div>
+      <div>
+        <small>Бронирование по телефону</small>
+        <h3 class="js-phone">+7 903 912-00-22</h3>
+        <p>Если играете впервые — тоже звоните. Подскажут по времени, количеству игроков и аренде ракеток.</p>
+      </div>
       <a class="btn dark" href="tel:+79039120022">Позвонить администратору <span class="arrow">↗</span></a>
     </div>
   </div>
 </section>
 
-<section id="lessons">
+<section class="learn" id="lessons">
   <div class="wrap">
     <div class="sectionHead">
       <div><div class="kicker">03 / Обучение</div><h2 class="sectionTitle">Быстрый старт</h2></div>
-      <p class="lead">Три понятных русскоязычных видео: базовые правила, подача и игра от стекла — то, что пригодится перед первой игрой.</p>
+      <p class="lead">Три коротких видео, которые помогут перед первой игрой: базовые правила, подача и понимание отскока от стекла.</p>
     </div>
     <div class="videos">
       <a class="videoCard" href="https://rutube.ru/video/2b3ed57061b28e5c4156542093daf93a/" target="_blank" rel="noopener">
@@ -296,17 +365,17 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
       </a>
       <a class="videoCard" href="https://rutube.ru/video/209c143f3e4814421bff107bf935e53e/" target="_blank" rel="noopener">
         <div class="thumb"><img src="assets/images/lesson-serve.webp" alt="Ошибки на подаче в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div>
-        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Подача: 5 главных ошибок новичка</h3></div>
+        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Подача: 5 частых ошибок новичка</h3></div>
       </a>
       <a class="videoCard" href="https://rutube.ru/video/190f182ee9fc0b5c77f5d04b206602e9/" target="_blank" rel="noopener">
         <div class="thumb"><img src="assets/images/lesson-glass.webp" alt="Игра от стекла в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div>
-        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Как понять отскок от стекла</h3></div>
+        <div class="videoMeta"><small>Strela Padel · RuTube</small><h3>Как читать отскок от стекла</h3></div>
       </a>
     </div>
     <div class="quickInfo">
-      <div class="quickCard"><span>01</span><h3>Правила</h3><p>Коротко о счёте, подаче, стенах и базовой логике игры.</p><a href="#rules">Читать правила ↗</a></div>
-      <div class="quickCard"><span>02</span><h3>Бронь по телефону</h3><p>Свободное время и бронь подтверждает администратор.</p><a class="js-phone-link js-phone" href="tel:+79039120022">+7 903 912-00-22 ↗</a></div>
-      <div class="quickCard"><span>03</span><h3>Что взять</h3><p>Спортивную форму и удобную обувь. Ракетку можно арендовать на месте.</p></div>
+      <div class="quickCard"><span>01</span><h3>Правила</h3><p>Ниже собраны основные принципы игры: счёт, подача, стены и формат матча.</p><a href="#rules">Читать правила ↗</a></div>
+      <div class="quickCard"><span>02</span><h3>Бронь по телефону</h3><p>Время игры и все детали бронирования подтверждает администратор.</p><a class="js-phone-link js-phone" href="tel:+79039120022">+7 903 912-00-22 ↗</a></div>
+      <div class="quickCard"><span>03</span><h3>Что взять</h3><p>Удобную спортивную одежду и обувь. Если своей ракетки нет — можно арендовать на месте.</p></div>
     </div>
   </div>
 </section>
@@ -315,27 +384,27 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
   <div class="wrap">
     <div class="sectionHead">
       <div><div class="kicker">04 / Правила</div><h2 class="sectionTitle">Перед первой игрой</h2></div>
-      <p class="lead">Самое важное без перегруза теорией. Этого достаточно, чтобы уверенно выйти на корт.</p>
+      <p class="lead">Самое важное — без лишней теории. Этого достаточно, чтобы уверенно выйти на корт и начать играть.</p>
     </div>
     <div class="rulesGrid">
-      <details open><summary>Основные правила</summary><p>Обычно играют 2×2. Мяч можно отбивать после одного отскока от покрытия. После отскока разрешена игра от стеклянной стены.</p></details>
-      <details><summary>Подача</summary><p>Подача выполняется снизу после отскока мяча от земли. Мяч направляют по диагонали в противоположный квадрат подачи.</p></details>
-      <details><summary>Счёт</summary><p>Чаще всего используется теннисная система счёта: 15, 30, 40, гейм. Формат конкретной игры можно заранее согласовать между игроками.</p></details>
-      <details><summary>Что взять с собой</summary><p>Спортивную форму и удобную обувь. Ракетки можно арендовать на месте, поэтому для первой игры свой инвентарь не обязателен.</p></details>
+      <details open><summary>Основные правила</summary><p>Обычно играют в формате 2×2. Мяч отбивают после одного отскока от покрытия. После этого разрешено использовать стеклянные стены — это часть игровой механики падела.</p></details>
+      <details><summary>Подача</summary><p>Подача выполняется снизу после отскока мяча от земли. Мяч направляется по диагонали в противоположный квадрат подачи.</p></details>
+      <details><summary>Счёт</summary><p>Чаще всего используется теннисная система: 15, 30, 40, гейм. Перед матчем игроки могут договориться о формате и количестве сетов.</p></details>
+      <details><summary>Что взять с собой</summary><p>Подойдёт спортивная форма и обувь с удобной подошвой. Для первой игры свой инвентарь не обязателен — ракетки можно взять на месте.</p></details>
     </div>
   </div>
 </section>
 
-<section id="projects">
+<section class="projects" id="projects">
   <div class="wrap">
     <div class="sectionHead">
       <div><div class="kicker">05 / Рядом</div><h2 class="sectionTitle">Империя туризма</h2></div>
-      <p class="lead">После игры можно остаться на базе, зайти в ресторан или продолжить вечер в клубе.</p>
+      <p class="lead">После игры можно остаться на базе, сходить в ресторан или продолжить вечер в клубе.</p>
     </div>
     <div class="projectsGrid">
-      <a class="projectLink" href="https://imperia-tur.com/" target="_blank" rel="noopener"><small>База отдыха</small><h3>Империя<br>туризма</h3><b>↗</b></a>
-      <a class="projectLink" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><small>Ресторан</small><h3>Сытый<br>кролик</h3><b>↗</b></a>
-      <a class="projectLink" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><small>Ночной клуб</small><h3>Империя</h3><b>↗</b></a>
+      <a class="projectLink base" href="https://imperia-tur.com/" target="_blank" rel="noopener"><div><small>База отдыха</small><h3>Империя<br>туризма</h3></div><b>↗</b></a>
+      <a class="projectLink restaurant" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><div><small>Ресторан</small><h3>Сытый<br>кролик</h3></div><b>↗</b></a>
+      <a class="projectLink club" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><div><small>Ночной клуб</small><h3>Империя</h3></div><b>↗</b></a>
     </div>
   </div>
 </section>
@@ -343,8 +412,14 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
 <section class="final">
   <div class="wrap">
     <div class="finalPanel">
-      <div><small>Готовы сыграть?</small><h2>Забронируйте<br>корт по телефону</h2><a class="finalPhone js-phone" href="tel:+79039120022">+7 903 912-00-22</a></div>
-      <a class="btn dark" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
+      <img src="https://raw.githubusercontent.com/landify-pro/imperiya.rest/main/assets/images/padel-court.webp" onerror="this.onerror=null;this.src='assets/images/court-wide.webp'" alt="Падел-корт на Катуни" loading="lazy">
+      <div class="finalText">
+        <small>Готовы сыграть?</small>
+        <h2>Забронируйте корт по телефону</h2>
+        <p>Играете впервые или уже знаете удобное время — просто позвоните. Подскажем по брони, количеству игроков и аренде инвентаря.</p>
+        <a class="finalPhone js-phone" href="tel:+79039120022">+7 903 912-00-22</a>
+      </div>
+      <a class="btn" href="tel:+79039120022">Позвонить <span class="arrow">↗</span></a>
     </div>
   </div>
 </section>
@@ -366,12 +441,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
     return new Intl.NumberFormat('ru-RU').format(n).replace(/\u00a0/g,' ')+' ₽';
   };
   const setText=(sel,val)=>{if(val===undefined||val===null||val==='')return;const el=document.querySelector(sel);if(el)el.textContent=val};
-  const setAll=(sel,val)=>{if(val===undefined||val===null||val==='')return;document.querySelectorAll(sel).forEach(el=>el.textContent=val)};
   fetch('content.json?v='+Date.now(),{cache:'no-store'})
     .then(r=>{if(!r.ok)throw new Error();return r.json()})
     .then(c=>{
       if(c.hero){
-        // Migrate the old demo defaults without forcing the user to overwrite content.json.
         if(c.hero.eyebrow && c.hero.eyebrow!=='Горный Алтай · Катунь') setText('.heroKicker',c.hero.eyebrow);
         if(c.hero.title && c.hero.title!=='PADEL') setText('.heroTitleMain',c.hero.title);
         if(c.hero.subtitle && c.hero.subtitle!=='КОРТ НА КАТУНИ') setText('.heroTitleSub',c.hero.subtitle);
@@ -397,7 +470,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 35px;background:#fafbf7}
       }
     }).catch(()=>{});
 })();
-
 const menu=document.getElementById('menu');
 const drawer=document.getElementById('drawer');
 if(menu&&drawer){
