@@ -1,13 +1,9 @@
-# Padel Imperia
+# padel.imperia
 
-Preview/source repository for the Padel court website at «Империя туризма».
+Landing page for the Padel Altay court at Imperia Tourism.
 
-- Static preview: GitHub Pages
-- Production target: Beget + PHP admin
-- Booking: by phone only
-- Schedule/calendar: intentionally removed
+Live preview: https://landify-pro.github.io/padel.imperia/
 
-## Beget admin
+Current stack: static HTML/CSS/JS with optional PHP admin for Beget deployment.
 
-`admin/index.php` is included, but `admin/config.php` is intentionally excluded from the public repository.
-Copy `admin/config.example.php` to `admin/config.php` on the server and set a private salt/password hash.
+Last asset repair: restored valid hero and lesson cover binaries for GitHub Pages.
