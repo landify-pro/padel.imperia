@@ -8,57 +8,362 @@
 <meta name="description" content="Падел-корт на территории «Империи туризма» в Горном Алтае. Цены, правила, видео и бронирование по телефону.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
-:root{--bg:#f3f4ed;--paper:#fff;--ink:#111819;--muted:#687375;--line:rgba(17,24,25,.1);--lime:#c9f60c;--dark:#071011;--sand:#edf0e4;--shadow:0 22px 60px rgba(25,40,39,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden}a{color:inherit}img{display:block;max-width:100%}
-.wrap{width:min(1220px,calc(100% - 64px));margin:auto}.k{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#829b00}.title{font-size:clamp(38px,5vw,72px);line-height:.94;letter-spacing:-.055em;margin:10px 0 0;font-weight:950}.lead{font-size:16px;line-height:1.65;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 22px;border:0;border-radius:15px;background:var(--lime);color:#111819;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 12px 28px rgba(164,195,20,.18);transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(164,195,20,.28)}.btn.dark{background:#111819;color:#fff;box-shadow:none}.btn.dark:hover{background:#273032}.btn:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #a9ce00;outline-offset:3px}
-header{position:sticky;top:0;z-index:50;background:rgba(245,246,240,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(17,24,25,.06)}.nav{height:78px;display:flex;align-items:center;gap:28px}.brand{margin-right:auto;text-decoration:none}.brand b{font-size:21px;letter-spacing:-.04em}.brand b i{font-style:normal;color:#8da800}.brand small{display:block;margin-top:5px;font-size:9px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#778183}.links{display:flex;gap:23px}.links a{text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:850;letter-spacing:.08em}.menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:20px}.drawer{display:none}
-.hero{position:relative;height:calc(100svh - 78px);min-height:620px;max-height:860px;overflow:hidden;background:var(--dark);color:#fff}.heroMedia{position:absolute;inset:0;z-index:0;background:var(--dark);overflow:hidden}.heroMedia picture,.heroMedia img{position:absolute;inset:0;width:100%;height:100%;display:block}.heroMedia img{object-fit:cover;object-position:center center;max-width:none;-webkit-mask-image:none;mask-image:none}.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,10,11,.88) 0%,rgba(4,10,11,.78) 26%,rgba(4,10,11,.52) 43%,rgba(4,10,11,.26) 58%,rgba(4,10,11,.07) 72%,rgba(4,10,11,0) 84%)}.hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,8,9,.02),transparent 62%,rgba(4,8,9,.28) 100%)}
-.heroIn{position:relative;z-index:2;height:100%;padding:clamp(34px,5vh,56px) 0 24px;display:grid;grid-template-columns:minmax(0,570px) minmax(360px,1fr);gap:42px}.heroCopy{align-self:center;max-width:570px;padding-bottom:30px}.hero .k{color:var(--lime)}h1{font-size:clamp(54px,5.7vw,84px);line-height:.88;letter-spacing:-.062em;margin:14px 0 0;font-weight:950;text-shadow:0 10px 30px rgba(0,0,0,.26)}h1 em{font-style:normal;color:var(--lime)}.heroText{max-width:500px;margin:18px 0 0;font-size:16px;line-height:1.58;color:rgba(255,255,255,.9);text-shadow:0 2px 14px rgba(0,0,0,.3)}.actions{display:flex;align-items:center;gap:17px;flex-wrap:wrap;margin-top:24px}.phone{font-size:14px;font-weight:800;text-decoration:none;color:rgba(255,255,255,.82);border-bottom:1px solid rgba(255,255,255,.26);padding:9px 0}
-.stats{position:absolute;right:0;bottom:18px;width:min(500px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(255,255,255,.16);border-radius:18px;overflow:hidden;background:rgba(5,12,13,.64);box-shadow:0 16px 36px rgba(0,0,0,.22);backdrop-filter:blur(13px)}.stat{padding:13px 16px;color:#fff;min-width:0}.stat+.stat{border-left:1px solid rgba(255,255,255,.13)}.stat small{display:block;font-size:8px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:rgba(213,255,43,.74)}.stat strong{display:block;margin-top:5px;font-size:19px;letter-spacing:-.035em;white-space:nowrap}
-section{padding:88px 0}.aboutGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:42px;align-items:center}.photo{position:relative;min-height:560px;border-radius:32px;overflow:hidden;box-shadow:var(--shadow);background:#d9e3dc}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 39%}.stamp{position:absolute;left:20px;bottom:20px;background:rgba(255,255,255,.93);border-radius:18px;padding:17px 18px;max-width:270px}.stamp b{display:block;font-size:34px;letter-spacing:-.05em}.stamp span{display:block;margin-top:7px;font-size:12px;line-height:1.45;color:#596466}.features{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:28px}.feature{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px}.feature small{display:block;color:#8aa500;font-size:10px;font-weight:900;letter-spacing:.13em;margin-bottom:9px}.feature b{font-size:14px;line-height:1.45}
-.booking{background:linear-gradient(180deg,#101719,#0d1315);color:#fff}.booking .k{color:var(--lime)}.head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:32px}.head .lead{max-width:480px;margin:0}.booking .lead{color:#aeb7b8}.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.price{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.04);border-radius:21px;padding:23px 21px}.price small{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#99a4a5}.price strong{display:block;margin:9px 0 7px;font-size:36px;letter-spacing:-.04em}.price p{margin:0;color:#b1babb;font-size:13px;line-height:1.5}.call{margin-top:13px;border-radius:25px;background:linear-gradient(135deg,#d3fb34,#b7e400);color:#111819;padding:31px 32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.call small{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.call h3{font-size:clamp(31px,4vw,50px);letter-spacing:-.05em;margin:7px 0 0}.call p{margin:9px 0 0;max-width:560px;color:#4f5d00;font-size:14px;line-height:1.5}
-.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.video{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 14px 34px rgba(30,42,41,.05);transition:transform .2s ease,box-shadow .2s ease}.video:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(30,42,41,.1)}.thumb{aspect-ratio:16/9;position:relative;overflow:hidden;background:#d9e3dc}.thumb img{width:100%;height:100%;object-fit:cover}.play{position:absolute;left:15px;bottom:15px;width:50px;height:50px;border-radius:50%;background:#fff;box-shadow:0 8px 22px rgba(0,0,0,.16)}.play:after{content:"";position:absolute;left:20px;top:16px;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:14px solid #111819}.meta{padding:17px 18px 20px}.meta small{font-size:10px;color:#8b9698;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.meta h3{font-size:18px;line-height:1.28;margin:9px 0 0;letter-spacing:-.02em}
-.rules{background:var(--sand)}.rulesGrid{display:grid;grid-template-columns:1fr 1fr;gap:11px;counter-reset:r}.rule{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px 18px;box-shadow:0 9px 22px rgba(35,48,47,.04)}.rule h3{margin:0;font-size:15px;line-height:1.4;font-weight:900;display:flex;align-items:center;gap:14px}.rule h3:before{counter-increment:r;content:"0" counter(r);margin-right:auto;color:#8fa900;font-size:11px;font-weight:900;letter-spacing:.13em}.rule p{margin:11px 0 0;color:#657173;font-size:13px;line-height:1.62}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.project{min-height:230px;border-radius:22px;overflow:hidden;text-decoration:none;position:relative;display:flex;align-items:flex-end;padding:21px;background-size:cover;background-position:center}.project:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,12,.06),rgba(8,12,12,.72))}.project>*{position:relative;z-index:1}.project small{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.78)}.project h3{font-size:32px;line-height:.96;letter-spacing:-.05em;color:#fff;margin:9px 0 0}.base{background-image:url('https://landify-pro.github.io/imperiya.rest/assets/images/base-at-night.webp')}.rest{background-image:url('https://landify-pro.github.io/imperiya.rest/assets/images/restaurant-atmosphere.webp')}.club{background-image:url('https://landify-pro.github.io/imperiya.rest/assets/images/club-atmosphere.webp')}
-.final{padding:70px 0 92px}.finalBox{position:relative;min-height:390px;border-radius:32px;overflow:hidden;padding:46px;display:grid;grid-template-columns:minmax(0,700px) auto;gap:35px;align-items:end;box-shadow:var(--shadow);color:#fff}.finalBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.finalBox:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,10,.92),rgba(5,9,10,.76) 42%,rgba(5,9,10,.25) 82%);z-index:1}.finalBox>*{position:relative;z-index:2}.finalBox h2{font-size:clamp(42px,5vw,68px);line-height:.94;letter-spacing:-.06em;margin:9px 0 0}.finalBox p{max-width:520px;margin:16px 0 0;font-size:16px;line-height:1.6;color:rgba(255,255,255,.94)}.finalPhone{display:inline-block;margin-top:16px;color:var(--lime);font-size:25px;font-weight:900;text-decoration:none}
-footer{padding:25px 0 32px;border-top:1px solid var(--line);background:#fafbf7}.foot{display:flex;justify-content:space-between;gap:20px;color:#758083;font-size:11px}.foot a{text-decoration:none;font-weight:850;color:#293234}
-@media(max-width:1100px){.heroIn{grid-template-columns:minmax(0,560px) 1fr;gap:24px}.stats{width:min(430px,100%)}h1{font-size:clamp(52px,7vw,78px)}.aboutGrid{grid-template-columns:1fr}.head{display:block}.head .lead{margin-top:15px;max-width:none}}
-@media(max-width:820px){.wrap{width:calc(100% - 40px)}.nav{height:72px}.links,.nav>.btn{display:none}.menu{display:block}.drawer{position:fixed;z-index:49;top:72px;left:20px;right:20px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 16px;box-shadow:var(--shadow)}.drawer.open{display:grid}.drawer a{padding:12px 3px;text-decoration:none;border-bottom:1px solid var(--line);font-size:11px;font-weight:850;text-transform:uppercase}.drawer a:last-child{border:0;color:#7f9800}.hero{height:auto;min-height:calc(100svh - 72px);max-height:none}.heroMedia img{object-fit:cover;object-position:center center}.hero:before{background:linear-gradient(180deg,rgba(5,9,10,.02),rgba(5,9,10,.12) 30%,rgba(5,9,10,.76) 65%,#091011 100%)}.heroIn{min-height:calc(100svh - 72px);height:auto;padding:42px 0 26px;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;gap:18px}.heroCopy{align-self:auto;max-width:600px;padding-bottom:0}h1{font-size:clamp(50px,14vw,78px)}.heroText{font-size:15px;max-width:540px}.stats{position:static;width:100%;max-width:500px}.features,.prices,.videos,.rulesGrid,.projects{grid-template-columns:1fr}.photo{min-height:470px}.call,.finalBox{grid-template-columns:1fr}.finalBox{padding:30px}.head{margin-bottom:25px}}
-@media(max-width:520px){.wrap{width:calc(100% - 36px)}.brand b{font-size:18px}.brand small{font-size:8px}h1{font-size:14vw}.heroText{font-size:14px;line-height:1.5}.actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}.actions .btn{width:100%}.phone{border:0;padding:3px 0}.stats{grid-template-columns:repeat(3,1fr)}.stat{padding:12px 9px}.stat strong{font-size:16px}.photo{min-height:430px}.stamp{left:14px;bottom:14px;max-width:235px}.price strong{font-size:32px}.call{padding:23px 20px}.call h3{font-size:34px}.project{min-height:180px}.finalBox h2{font-size:42px}.foot{display:block;text-align:center}.foot>*+*{margin-top:9px}}
+:root{
+  --bg:#f3f4ed;
+  --paper:#fff;
+  --ink:#111819;
+  --muted:#687375;
+  --line:rgba(17,24,25,.1);
+  --lime:#c9f60c;
+  --dark:#071011;
+  --sand:#edf0e4;
+  --shadow:0 22px 60px rgba(25,40,39,.09)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+a{color:inherit}
+a,button{-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:100%}
+section[id]{scroll-margin-top:86px}
+.wrap{width:min(1480px,calc(100% - 96px));margin:auto}
+.k{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#829b00}
+.title{font-size:clamp(42px,5vw,80px);line-height:.94;letter-spacing:-.055em;margin:10px 0 0;font-weight:950}
+.lead{font-size:16px;line-height:1.65;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 24px;border:0;border-radius:15px;background:var(--lime);color:#111819;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 12px 28px rgba(164,195,20,.18);transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(164,195,20,.28)}
+.btn.dark{background:#111819;color:#fff;box-shadow:none}
+.btn.dark:hover{background:#273032}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #a9ce00;outline-offset:3px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(245,246,240,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(17,24,25,.06)}
+.nav{height:78px;display:flex;align-items:center;gap:30px}
+.brand{margin-right:auto;text-decoration:none}
+.brand b{font-size:21px;letter-spacing:-.04em}
+.brand b i{font-style:normal;color:#8da800}
+.brand small{display:block;margin-top:5px;font-size:9px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#778183}
+.links{display:flex;gap:25px}
+.links a{text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:850;letter-spacing:.08em}
+.menu{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font-size:20px;cursor:pointer}
+.drawer{display:none}
+
+.hero{position:relative;height:calc(100svh - 78px);min-height:640px;max-height:880px;overflow:hidden;background:var(--dark);color:#fff}
+.heroMedia{position:absolute;inset:0;z-index:0;background:var(--dark);overflow:hidden}
+.heroMedia picture,.heroMedia img{position:absolute;inset:0;width:100%;height:100%;display:block}
+.heroMedia img{object-fit:cover;object-position:center center;max-width:none}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,10,11,.9) 0%,rgba(4,10,11,.78) 26%,rgba(4,10,11,.52) 44%,rgba(4,10,11,.23) 60%,rgba(4,10,11,.04) 78%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,8,9,.02) 0%,transparent 58%,rgba(4,8,9,.4) 78%,rgba(243,244,237,.16) 96%,var(--bg) 100%)}
+.heroIn{position:relative;z-index:2;height:100%;padding:clamp(36px,5vh,56px) 0 42px;display:grid;grid-template-columns:minmax(0,680px) minmax(380px,1fr);gap:52px}
+.heroCopy{align-self:end;max-width:680px;padding-bottom:138px}
+.hero .k{color:var(--lime)}
+h1{font-size:clamp(64px,7vw,112px);line-height:.86;letter-spacing:-.065em;margin:14px 0 0;font-weight:950;text-shadow:0 10px 30px rgba(0,0,0,.26)}
+h1 em{font-style:normal;color:var(--lime)}
+.heroText{max-width:610px;margin:22px 0 0;font-size:clamp(18px,1.55vw,25px);line-height:1.35;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.3)}
+.heroNote{max-width:520px;margin:10px 0 0;font-size:15px;line-height:1.55;color:rgba(255,255,255,.72);text-shadow:0 2px 14px rgba(0,0,0,.32)}
+.actions{position:absolute;left:0;bottom:42px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.phone{font-size:17px;font-weight:850;text-decoration:none;color:#fff;border-bottom:1px solid rgba(255,255,255,.3);padding:10px 0}
+.stats{position:absolute;right:0;bottom:42px;width:min(580px,100%);display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.18);border-radius:19px;overflow:hidden;background:rgba(5,12,13,.7);box-shadow:0 16px 36px rgba(0,0,0,.22);backdrop-filter:blur(14px)}
+.stat{padding:18px 20px;color:#fff;min-width:0}
+.stat+.stat{border-left:1px solid rgba(255,255,255,.14)}
+.stat small{display:block;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:rgba(213,255,43,.78)}
+.stat strong{display:block;margin-top:7px;font-size:24px;letter-spacing:-.035em;white-space:nowrap}
+
+section{padding:96px 0}
+.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.photo{position:relative;aspect-ratio:1/1.02;border-radius:34px;overflow:hidden;box-shadow:var(--shadow);background:#d9e3dc}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 39%}
+.aboutCopy .lead{max-width:650px;margin:24px 0 0;font-size:18px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:32px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:19px;padding:21px 20px;min-height:116px}
+.feature small{display:block;color:#8aa500;font-size:10px;font-weight:900;letter-spacing:.13em;margin-bottom:11px}
+.feature b{font-size:15px;line-height:1.45}
+
+.booking{position:relative;overflow:hidden;background:linear-gradient(180deg,#101719,#0d1315);color:#fff}
+.booking:before{content:"";position:absolute;right:-140px;top:-220px;width:520px;height:520px;border-radius:50%;background:rgba(201,246,12,.07);filter:blur(4px)}
+.booking .wrap{position:relative;z-index:1}
+.booking .k{color:var(--lime)}
+.head{display:flex;align-items:end;justify-content:space-between;gap:38px;margin-bottom:36px}
+.head .lead{max-width:540px;margin:0}
+.booking .lead{color:#aeb7b8;font-size:18px}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.price{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.04);border-radius:23px;padding:29px 27px}
+.price small{font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#99a4a5}
+.price strong{display:block;margin:11px 0 8px;font-size:43px;letter-spacing:-.04em}
+.price p{margin:0;color:#b1babb;font-size:14px;line-height:1.5}
+.call{margin-top:15px;border-radius:27px;background:linear-gradient(135deg,#d3fb34,#b7e400);color:#111819;padding:35px 38px;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,410px);gap:34px;align-items:center}
+.call small{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.call h3{font-size:clamp(38px,4.7vw,66px);line-height:1;letter-spacing:-.055em;margin:9px 0 0;white-space:nowrap}
+.call p{margin:12px 0 0;max-width:620px;color:#4f5d00;font-size:15px;line-height:1.5}
+.call .btn{width:100%;min-height:104px;padding:25px 34px;border-radius:24px;font-size:18px;letter-spacing:.035em}
+
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.video{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(30,42,41,.05);transition:transform .2s ease,box-shadow .2s ease}
+.video:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(30,42,41,.1)}
+.thumb{aspect-ratio:16/9;position:relative;overflow:hidden;background:#d9e3dc}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.video:hover .thumb img{transform:scale(1.025)}
+.play{position:absolute;left:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#fff;box-shadow:0 8px 22px rgba(0,0,0,.16)}
+.play:after{content:"";position:absolute;left:23px;top:18px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:15px solid #111819}
+.meta{padding:20px 21px 23px}
+.meta small{font-size:10px;color:#8b9698;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+.meta h3{font-size:19px;line-height:1.28;margin:10px 0 0;letter-spacing:-.02em}
+
+.rules{background:var(--sand)}
+.rulesGrid{display:grid;grid-template-columns:1fr 1fr;gap:13px;counter-reset:r}
+.rule{background:#fff;border:1px solid var(--line);border-radius:19px;padding:23px 21px;box-shadow:0 9px 22px rgba(35,48,47,.04)}
+.rule h3{margin:0;font-size:16px;line-height:1.4;font-weight:900;display:flex;align-items:center;gap:14px}
+.rule h3:before{counter-increment:r;content:"0" counter(r);margin-right:auto;color:#8fa900;font-size:11px;font-weight:900;letter-spacing:.13em}
+.rule p{margin:12px 0 0;color:#657173;font-size:14px;line-height:1.62}
+
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.project{min-height:270px;border-radius:24px;overflow:hidden;text-decoration:none;position:relative;display:flex;align-items:flex-end;padding:24px;background-size:cover;background-position:center;transition:transform .2s ease}
+.project:hover{transform:translateY(-3px)}
+.project:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,12,.06),rgba(8,12,12,.74))}
+.project>*{position:relative;z-index:1}
+.project small{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.project h3{font-size:36px;line-height:.96;letter-spacing:-.05em;color:#fff;margin:10px 0 0}
+.base{background-image:url('https://landify-pro.github.io/imperiya.rest/assets/images/base-at-night.webp')}
+.rest{background-image:url('https://landify-pro.github.io/imperiya.rest/assets/images/restaurant-atmosphere.webp')}
+.club{background-image:url('https://landify-pro.github.io/imperiya.rest/assets/images/club-atmosphere.webp')}
+
+.final{padding:76px 0 96px}
+.finalBox{position:relative;min-height:560px;border-radius:34px;overflow:hidden;padding:52px 56px;display:grid;grid-template-columns:minmax(0,760px) minmax(280px,420px);gap:42px;align-items:end;box-shadow:var(--shadow);color:#fff;background:#0d1515}
+.finalBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
+.finalBox:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,10,.92) 0%,rgba(5,9,10,.76) 39%,rgba(5,9,10,.38) 64%,rgba(5,9,10,.18) 100%),linear-gradient(180deg,rgba(5,9,10,.12),rgba(5,9,10,.35));z-index:1}
+.finalBox>*{position:relative;z-index:2}
+.finalBox h2{font-size:clamp(48px,5.5vw,82px);line-height:.92;letter-spacing:-.06em;margin:10px 0 0}
+.finalBox p{max-width:560px;margin:18px 0 0;font-size:17px;line-height:1.58;color:rgba(255,255,255,.95);text-shadow:0 2px 16px rgba(0,0,0,.38)}
+.finalPhone{display:inline-block;margin-top:18px;color:var(--lime);font-size:30px;font-weight:900;text-decoration:none}
+.finalBox>.btn{width:100%;min-height:72px;font-size:14px}
+
+footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
+.foot{display:flex;justify-content:space-between;gap:20px;color:#758083;font-size:11px}
+.foot a{text-decoration:none;font-weight:850;color:#293234}
+
+@media(max-width:1180px){
+  .wrap{width:calc(100% - 64px)}
+  .heroIn{grid-template-columns:minmax(0,600px) 1fr;gap:24px}
+  .stats{width:min(500px,100%)}
+  h1{font-size:clamp(60px,8vw,94px)}
+  .call{grid-template-columns:minmax(0,1fr) minmax(280px,340px)}
+  .call h3{font-size:clamp(37px,4.8vw,54px)}
+  .aboutGrid{gap:40px}
+}
+@media(max-width:980px){
+  .wrap{width:calc(100% - 40px)}
+  .nav{height:72px}
+  .links,.nav>.btn{display:none}
+  .menu{display:block}
+  .drawer{position:fixed;z-index:49;top:72px;left:20px;right:20px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 16px;box-shadow:var(--shadow)}
+  .drawer.open{display:grid}
+  .drawer a{padding:13px 3px;text-decoration:none;border-bottom:1px solid var(--line);font-size:11px;font-weight:850;text-transform:uppercase}
+  .drawer a:last-child{border:0;color:#7f9800}
+  .hero{height:auto;min-height:calc(100svh - 72px);max-height:none}
+  .heroMedia img{object-fit:cover;object-position:center center}
+  .hero:before{background:linear-gradient(180deg,rgba(5,9,10,.02) 0%,rgba(5,9,10,.12) 28%,rgba(5,9,10,.75) 60%,#091011 91%)}
+  .hero:after{background:linear-gradient(180deg,transparent 79%,rgba(243,244,237,.12) 97%,var(--bg) 100%)}
+  .heroIn{min-height:calc(100svh - 72px);height:auto;padding:44px 0 28px;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;gap:18px}
+  .heroCopy{align-self:auto;max-width:680px;padding-bottom:0}
+  h1{font-size:clamp(58px,14vw,88px)}
+  .heroText{font-size:clamp(17px,4.2vw,23px);max-width:620px}
+  .heroNote{font-size:14px}
+  .actions{position:static;display:flex;margin-top:2px}
+  .stats{position:static;width:100%;max-width:620px}
+  section{padding:78px 0}
+  .aboutGrid{grid-template-columns:1fr;gap:38px}
+  .photo{aspect-ratio:4/3;min-height:0}
+  .head{display:block}
+  .head .lead{margin-top:17px;max-width:none}
+  .call,.finalBox{grid-template-columns:1fr}
+  .call .btn{min-height:76px}
+  .finalBox{min-height:590px;padding:38px;align-content:end}
+  .finalBox>.btn{max-width:420px}
+  .features,.prices,.videos,.rulesGrid,.projects{grid-template-columns:1fr}
+  .project{min-height:220px}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 30px)}
+  .brand b{font-size:18px}
+  .brand small{font-size:8px}
+  .heroIn{padding-top:34px;padding-bottom:24px;gap:14px}
+  h1{font-size:15.2vw;line-height:.86}
+  .heroText{font-size:17px;line-height:1.35;margin-top:18px}
+  .heroNote{font-size:13px;line-height:1.5;margin-top:8px}
+  .actions{display:grid;grid-template-columns:1fr;gap:6px}
+  .actions .btn{width:100%}
+  .phone{border:0;padding:5px 0;font-size:16px}
+  .stats{grid-template-columns:repeat(3,1fr);border-radius:16px}
+  .stat{padding:13px 9px}
+  .stat small{font-size:7px;letter-spacing:.08em}
+  .stat strong{font-size:16px;margin-top:5px}
+  section{padding:68px 0}
+  .title{font-size:43px}
+  .photo{aspect-ratio:1/1.08;border-radius:25px}
+  .features{gap:9px;margin-top:24px}
+  .feature{min-height:0;padding:18px}
+  .booking .lead,.aboutCopy .lead{font-size:16px}
+  .price{padding:23px 21px}
+  .price strong{font-size:34px}
+  .call{padding:25px 21px;gap:23px;border-radius:23px}
+  .call h3{font-size:clamp(31px,10.5vw,42px);white-space:normal}
+  .call p{font-size:14px}
+  .call .btn{min-height:66px;padding:20px;font-size:14px;border-radius:17px}
+  .play{width:50px;height:50px}
+  .play:after{left:20px;top:16px;border-top-width:9px;border-bottom-width:9px;border-left-width:14px}
+  .meta h3{font-size:18px}
+  .final{padding:58px 0 72px}
+  .finalBox{min-height:620px;padding:30px 24px;border-radius:25px;gap:24px}
+  .finalBox:before{background:linear-gradient(180deg,rgba(5,9,10,.33) 0%,rgba(5,9,10,.42) 42%,rgba(5,9,10,.94) 78%,rgba(5,9,10,.98) 100%)}
+  .finalBox h2{font-size:45px}
+  .finalBox p{font-size:15px;margin-top:14px}
+  .finalPhone{font-size:23px}
+  .finalBox>.btn{min-height:62px}
+  .foot{display:block;text-align:center}
+  .foot>*+*{margin-top:9px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top"><b>ПАДЕЛ <i>АЛТАЙ</i></b><small>Империя туризма · Катунь</small></a>
-    <nav class="links"><a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a></nav>
-    <a class="btn" href="tel:+79039120022">Забронировать ↗</a>
+    <a class="brand" href="#top" aria-label="Падел Алтай — к началу страницы"><b>ПАДЕЛ <i>АЛТАЙ</i></b><small>Империя туризма · Катунь</small></a>
+    <nav class="links" aria-label="Основная навигация"><a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a></nav>
+    <a class="btn js-phone-href" href="tel:+79039120022">Забронировать ↗</a>
     <button class="menu" id="menu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer">☰</button>
   </div>
-  <div class="drawer" id="drawer"><a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a><a href="tel:+79039120022">Забронировать</a></div>
+  <div class="drawer" id="drawer"><a href="#court">О корте</a><a href="#prices">Цены</a><a href="#lessons">Обучение</a><a href="#rules">Правила</a><a href="#projects">Рядом</a><a class="js-phone-href" href="tel:+79039120022">Забронировать</a></div>
 </header>
 <main id="top">
 <section class="hero">
-  <div class="heroMedia"><picture><source media="(max-width:820px)" srcset="assets/images/hero-mobile.jpg"><img src="assets/images/hero-desktop.jpg" alt="Падел-корт среди сосен в Горном Алтае" fetchpriority="high"></picture></div>
+  <div class="heroMedia"><picture class="heroPicture"><source media="(max-width:980px)" srcset="assets/images/hero-mobile.jpg"><img class="heroImage" src="assets/images/hero-desktop.jpg" alt="Падел-корт в горах на берегу Катуни" fetchpriority="high"></picture></div>
   <div class="wrap heroIn">
     <div class="heroCopy">
-      <div class="k">Империя туризма · Горный Алтай</div>
-      <h1><em>ПАДЕЛ</em><br>НА КАТУНИ</h1>
-      <p class="heroText">Падел-корт среди сосен на территории «Империи туризма». Рядом — Катунь, бронь — по телефону.</p>
-      <div class="actions"><a class="btn" href="tel:+79039120022">Забронировать ↗</a><a class="phone" href="tel:+79039120022">+7 903 912-00-22</a></div>
+      <div class="k heroEyebrow">Империя туризма · Горный Алтай</div>
+      <h1><em class="heroTitleMain">ПАДЕЛ</em><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
+      <p class="heroText heroDescription">Падел-корт в горах, на берегу Катуни</p>
+      <p class="heroNote">Бронирование по телефону, аренда ракеток — на месте.</p>
     </div>
-    <div class="stats"><div class="stat"><small>Режим</small><strong>24/7</strong></div><div class="stat"><small>Корт / час</small><strong>3 500 ₽</strong></div><div class="stat"><small>Ракетка / час</small><strong>500 ₽</strong></div></div>
+    <div class="actions"><a class="btn js-phone-href" href="tel:+79039120022">Забронировать ↗</a><a class="phone js-phone js-phone-href" href="tel:+79039120022">+7 903 912-00-22</a></div>
+    <div class="stats"><div class="stat"><small>Режим</small><strong id="hoursMain">24/7</strong></div><div class="stat"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div><div class="stat"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div></div>
   </div>
 </section>
-<section id="court"><div class="wrap aboutGrid"><div class="photo"><img src="assets/images/racket-close.jpg" alt="Падел-корт в Горном Алтае"><div class="stamp"><b>Катунь</b><span>корт находится на территории «Империи туризма»</span></div></div><div><div class="k">01 / О корте</div><h2 class="title">Корт в соснах<br>на берегу Катуни</h2><p class="lead">Полноразмерный падел-корт со стеклянными бортами. Ракетки можно взять в аренду на месте.</p><div class="features"><div class="feature"><small>01</small><b>Полноразмерный корт для падела</b></div><div class="feature"><small>02</small><b>На территории «Империи туризма»</b></div><div class="feature"><small>03</small><b>Игра 1×1 или классический формат 2×2</b></div><div class="feature"><small>04</small><b>Ракетки доступны в аренду</b></div></div></div></div></section>
-<section class="booking" id="prices"><div class="wrap"><div class="head"><div><div class="k">02 / Цены и бронь</div><h2 class="title">Цена и бронь</h2></div><p class="lead">3 500 ₽ за час корта. Если нужна ракетка — 500 ₽ в час.</p></div><div class="prices"><div class="price"><small>Корт</small><strong>3 500 ₽</strong><p>1 час игры</p></div><div class="price"><small>Ракетка</small><strong>500 ₽</strong><p>1 час аренды</p></div><div class="price"><small>Режим</small><strong>24/7</strong><p>ежедневно</p></div></div><div class="call"><div><small>Бронирование по телефону</small><h3>+7 903 912-00-22</h3><p>Назовите удобное время — администратор проверит свободный слот.</p></div><a class="btn dark" href="tel:+79039120022">Забронировать ↗</a></div></div></section>
-<section id="lessons"><div class="wrap"><div class="head"><div><div class="k">03 / Обучение</div><h2 class="title">3 видео перед первой игрой</h2></div><p class="lead">Правила, подача и игра от стекла — три вещи, с которых проще всего начать.</p></div><div class="videos"><a class="video" href="https://rutube.ru/video/2b3ed57061b28e5c4156542093daf93a/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/video-cover-1.jpg" alt="Падел для начинающих" loading="lazy"><span class="play"></span></div><div class="meta"><small>Strela Padel · RuTube</small><h3>Падел для начинающих: всё за 10 минут</h3></div></a><a class="video" href="https://rutube.ru/video/209c143f3e4814421bff107bf935e53e/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/video-cover-2.jpg" alt="Подача в паделе" loading="lazy"><span class="play"></span></div><div class="meta"><small>Strela Padel · RuTube</small><h3>Подача: 5 частых ошибок новичка</h3></div></a><a class="video" href="https://rutube.ru/video/190f182ee9fc0b5c77f5d04b206602e9/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/video-cover-3.jpg" alt="Игра от стекла" loading="lazy"><span class="play"></span></div><div class="meta"><small>Strela Padel · RuTube</small><h3>Как читать отскок от стекла</h3></div></a></div></div></section>
-<section class="rules" id="rules"><div class="wrap"><div class="head"><div><div class="k">04 / Правила</div><h2 class="title">Что важно знать</h2></div><p class="lead">База перед выходом на корт.</p></div><div class="rulesGrid"><article class="rule"><h3>Основные правила</h3><p>Обычно играют 2×2. После одного отскока мяч можно продолжать через стеклянные стены — это часть игры.</p></article><article class="rule"><h3>Подача</h3><p>Подача выполняется снизу после отскока мяча от покрытия и идёт по диагонали.</p></article><article class="rule"><h3>Счёт</h3><p>Счёт — как в теннисе: 15, 30, 40, гейм. Формат матча можно выбрать перед игрой.</p></article><article class="rule"><h3>Что взять с собой</h3><p>Спортивную форму и удобную обувь. Ракетку можно арендовать на месте.</p></article></div></div></section>
-<section id="projects"><div class="wrap"><div class="head"><div><div class="k">05 / Рядом</div><h2 class="title">Всё рядом</h2></div><p class="lead">После игры можно остаться на территории комплекса: база отдыха, ресторан и клуб находятся здесь же.</p></div><div class="projects"><a class="project base" href="https://imperia-tur.com/" target="_blank" rel="noopener"><div><small>База отдыха</small><h3>Империя<br>туризма</h3></div></a><a class="project rest" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><div><small>Ресторан</small><h3>Сытый<br>кролик</h3></div></a><a class="project club" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><div><small>Ночной клуб</small><h3>Империя</h3></div></a></div></div></section>
-<section class="final"><div class="wrap"><div class="finalBox"><img src="assets/images/racket-close.jpg" alt="Падел-корт на Катуни"><div><div class="k" style="color:#d6ff2b">Готовы сыграть?</div><h2>Забронировать корт</h2><p>Позвоните администратору — проверим свободное время.</p><a class="finalPhone" href="tel:+79039120022">+7 903 912-00-22</a></div><a class="btn" href="tel:+79039120022">Забронировать ↗</a></div></div></section>
+
+<section id="court">
+  <div class="wrap aboutGrid">
+    <div class="photo"><img src="assets/images/racket-close.jpg" alt="Полноразмерный падел-корт" loading="lazy"></div>
+    <div class="aboutCopy">
+      <div class="k">01 / О корте</div>
+      <h2 class="title">Полноразмерный корт для игры и тренировок</h2>
+      <p class="lead">Полноразмерный падел-корт для тренировок и матчей. Подходит для игры 1×1 и классического формата 2×2.</p>
+      <div class="features"><div class="feature"><small>01</small><b>Полноразмерный корт для падела</b></div><div class="feature"><small>02</small><b>На территории «Империи туризма»</b></div><div class="feature"><small>03</small><b>Игра 1×1 или классический формат 2×2</b></div><div class="feature"><small>04</small><b>Ракетки доступны в аренду</b></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="booking" id="prices">
+  <div class="wrap">
+    <div class="head"><div><div class="k">02 / Цены и бронь</div><h2 class="title">Цена и бронь</h2></div><p class="lead">3 500 ₽ за час корта. Если нужна ракетка — 500 ₽ в час.</p></div>
+    <div class="prices"><div class="price"><small>Корт</small><strong id="courtPriceMain">3 500 ₽</strong><p>1 час игры</p></div><div class="price"><small>Ракетка</small><strong id="racketPriceMain">500 ₽</strong><p>1 час аренды</p></div><div class="price"><small>Режим</small><strong id="hoursPrice">24/7</strong><p>ежедневно</p></div></div>
+    <div class="call"><div><small>Бронирование по телефону</small><h3 class="js-phone">+7 903 912-00-22</h3><p>Назовите удобное время — администратор проверит свободный слот.</p></div><a class="btn dark js-phone-href" href="tel:+79039120022">Забронировать ↗</a></div>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <div class="head"><div><div class="k">03 / Обучение</div><h2 class="title">3 видео перед первой игрой</h2></div><p class="lead">Правила, подача и игра от стекла — три вещи, с которых проще всего начать.</p></div>
+    <div class="videos">
+      <a class="video" href="https://rutube.ru/video/2b3ed57061b28e5c4156542093daf93a/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/video-cover-1.jpg" alt="Падел для начинающих" loading="lazy"><span class="play" aria-hidden="true"></span></div><div class="meta"><small>Strela Padel · RuTube</small><h3>Падел для начинающих: всё за 10 минут</h3></div></a>
+      <a class="video" href="https://rutube.ru/video/209c143f3e4814421bff107bf935e53e/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/video-cover-3.jpg" alt="Подача в паделе" loading="lazy"><span class="play" aria-hidden="true"></span></div><div class="meta"><small>Strela Padel · RuTube</small><h3>Подача: 5 частых ошибок новичка</h3></div></a>
+      <a class="video" href="https://rutube.ru/video/190f182ee9fc0b5c77f5d04b206602e9/" target="_blank" rel="noopener"><div class="thumb"><img src="assets/images/video-cover-2.jpg" alt="Игра от стекла" loading="lazy"><span class="play" aria-hidden="true"></span></div><div class="meta"><small>Strela Padel · RuTube</small><h3>Как читать отскок от стекла</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="rules" id="rules">
+  <div class="wrap">
+    <div class="head"><div><div class="k">04 / Правила</div><h2 class="title">Что важно знать</h2></div><p class="lead">База перед выходом на корт.</p></div>
+    <div class="rulesGrid"><article class="rule"><h3>Основные правила</h3><p>Обычно играют 2×2. После одного отскока мяч можно продолжать через стеклянные стены — это часть игры.</p></article><article class="rule"><h3>Подача</h3><p>Подача выполняется снизу после отскока мяча от покрытия и идёт по диагонали.</p></article><article class="rule"><h3>Счёт</h3><p>Счёт — как в теннисе: 15, 30, 40, гейм. Формат матча можно выбрать перед игрой.</p></article><article class="rule"><h3>Что взять с собой</h3><p>Спортивную форму и удобную обувь. Ракетку можно арендовать на месте.</p></article></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><div><div class="k">05 / Рядом</div><h2 class="title">Всё рядом</h2></div><p class="lead">После игры можно остаться на территории комплекса: база отдыха, ресторан и клуб находятся здесь же.</p></div>
+    <div class="projects"><a class="project base" href="https://imperia-tur.com/" target="_blank" rel="noopener"><div><small>База отдыха</small><h3>Империя<br>туризма</h3></div></a><a class="project rest" href="http://bskrus20.beget.tech/sytyi-krolik/" target="_blank" rel="noopener"><div><small>Ресторан</small><h3>Сытый<br>кролик</h3></div></a><a class="project club" href="http://bskrus20.beget.tech/club-imperia/" target="_blank" rel="noopener"><div><small>Ночной клуб</small><h3>Империя</h3></div></a></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="finalBox"><img src="assets/images/padel-final-approved-16x9.jpg" alt="Падел-корт с высоты" loading="lazy"><div><div class="k" style="color:#d6ff2b">Готовы сыграть?</div><h2>Забронировать корт</h2><p>Позвоните администратору — проверим свободное время.</p><a class="finalPhone js-phone js-phone-href" href="tel:+79039120022">+7 903 912-00-22</a></div><a class="btn js-phone-href" href="tel:+79039120022">Забронировать ↗</a></div>
+  </div>
+</section>
 </main>
-<footer><div class="wrap foot"><div><b>ПАДЕЛ · АЛТАЙ</b> · Империя туризма</div><div>Горный Алтай · Катунь</div><a href="tel:+79039120022">+7 903 912-00-22</a></div></footer>
-<script>const m=document.getElementById('menu'),d=document.getElementById('drawer');if(m&&d){const setMenu=open=>{d.classList.toggle('open',open);m.setAttribute('aria-expanded',String(open));m.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню')};m.onclick=()=>setMenu(!d.classList.contains('open'));d.querySelectorAll('a').forEach(a=>a.onclick=()=>setMenu(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});document.addEventListener('click',e=>{if(d.classList.contains('open')&&!d.contains(e.target)&&!m.contains(e.target))setMenu(false)})}</script>
+<footer><div class="wrap foot"><div><b>ПАДЕЛ · АЛТАЙ</b> · Империя туризма</div><div class="js-address">Горный Алтай · Катунь</div><a class="js-phone js-phone-href" href="tel:+79039120022">+7 903 912-00-22</a></div></footer>
+
+<script>
+(function(){
+  const formatPrice=value=>{
+    const number=Number(value);
+    if(!Number.isFinite(number))return String(value||'');
+    return new Intl.NumberFormat('ru-RU').format(number).replace(/\u00a0/g,' ')+' ₽';
+  };
+  const setText=(selector,value)=>{
+    if(value===undefined||value===null||value==='')return;
+    const element=document.querySelector(selector);
+    if(element)element.textContent=value;
+  };
+  fetch('content.json?v='+Date.now(),{cache:'no-store'})
+    .then(response=>{if(!response.ok)throw new Error('content.json');return response.json()})
+    .then(content=>{
+      if(content.hero){
+        setText('.heroEyebrow',content.hero.eyebrow);
+        setText('.heroTitleMain',content.hero.title);
+        setText('.heroTitleSub',content.hero.subtitle);
+        setText('.heroDescription',content.hero.description);
+        if(content.hero.image){
+          const versioned=content.hero.image+(content.hero.image.includes('?')?'&':'?')+'v='+Date.now();
+          const image=document.querySelector('.heroImage');
+          if(image)image.src=versioned;
+          document.querySelectorAll('.heroPicture source').forEach(source=>source.srcset=versioned);
+        }
+      }
+      if(content.pricing){
+        setText('#hoursMain',content.pricing.hours);
+        setText('#hoursPrice',content.pricing.hours);
+        setText('#courtPriceHero',formatPrice(content.pricing.courtPrice));
+        setText('#courtPriceMain',formatPrice(content.pricing.courtPrice));
+        setText('#racketPriceHero',formatPrice(content.pricing.racketPrice));
+        setText('#racketPriceMain',formatPrice(content.pricing.racketPrice));
+      }
+      if(content.contacts){
+        const phone=content.contacts.phone||'';
+        const phoneHref='tel:'+(content.contacts.phoneHref||'').replace(/[^\d+]/g,'');
+        if(phone)document.querySelectorAll('.js-phone').forEach(element=>element.textContent=phone);
+        if(phoneHref!=='tel:')document.querySelectorAll('.js-phone-href').forEach(element=>element.href=phoneHref);
+        setText('.js-address',content.contacts.address);
+      }
+    })
+    .catch(()=>{});
+})();
+
+const menu=document.getElementById('menu');
+const drawer=document.getElementById('drawer');
+if(menu&&drawer){
+  const setMenu=open=>{
+    drawer.classList.toggle('open',open);
+    menu.setAttribute('aria-expanded',String(open));
+    menu.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');
+  };
+  menu.addEventListener('click',()=>setMenu(!drawer.classList.contains('open')));
+  drawer.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setMenu(false)));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')setMenu(false)});
+  document.addEventListener('click',event=>{if(drawer.classList.contains('open')&&!drawer.contains(event.target)&&!menu.contains(event.target))setMenu(false)});
+}
+</script>
 </body>
 </html>
