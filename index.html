@@ -50,7 +50,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,246,240,.94);backdro
 .hero{position:relative;height:calc(100svh - 78px);min-height:640px;max-height:880px;overflow:hidden;background:var(--dark);color:#fff}
 .heroMedia{position:absolute;inset:0;z-index:0;background:var(--dark);overflow:hidden}
 .heroMedia picture,.heroMedia img{position:absolute;inset:0;width:100%;height:100%;display:block}
-.heroMedia img{object-fit:cover;object-position:center center;max-width:none}
+.heroMedia img{object-fit:cover;object-position:center 82%;max-width:none}
 .hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,10,11,.9) 0%,rgba(4,10,11,.78) 26%,rgba(4,10,11,.52) 44%,rgba(4,10,11,.23) 60%,rgba(4,10,11,.04) 78%)}
 .hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(4,8,9,.02) 0%,transparent 58%,rgba(4,8,9,.4) 78%,rgba(243,244,237,.16) 96%,var(--bg) 100%)}
 .heroIn{position:relative;z-index:2;height:100%;padding:clamp(36px,5vh,56px) 0 42px;display:grid;grid-template-columns:minmax(0,680px) minmax(380px,1fr);gap:52px}
@@ -129,7 +129,7 @@ section{padding:96px 0}
 
 .final{padding:76px 0 96px}
 .finalBox{position:relative;min-height:560px;border-radius:34px;overflow:hidden;padding:52px 56px;display:grid;grid-template-columns:minmax(0,760px) minmax(280px,420px);gap:42px;align-items:end;box-shadow:var(--shadow);color:#fff;background:#0d1515}
-.finalBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.finalBox img{position:absolute;inset:0 auto 0 0;width:106%;height:100%;max-width:none;object-fit:cover;object-position:center center;filter:brightness(.5)}
 .finalBox:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,10,.92) 0%,rgba(5,9,10,.76) 39%,rgba(5,9,10,.38) 64%,rgba(5,9,10,.18) 100%),linear-gradient(180deg,rgba(5,9,10,.38),rgba(5,9,10,.56));z-index:1}
 .finalBox>*{position:relative;z-index:2}
 .finalBox h2{font-size:clamp(48px,5.5vw,82px);line-height:.92;letter-spacing:-.06em;margin:10px 0 0}
@@ -187,9 +187,10 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   .brand b{font-size:18px}
   .brand small{font-size:8px}
   .heroIn{padding-top:34px;padding-bottom:24px;gap:14px}
-  .heroCopy{position:absolute;top:24px;left:0;width:100%;max-width:none}
+  .heroCopy{display:contents}
+  .heroHead{position:absolute;top:24px;left:0;width:100%;max-width:none}
   h1{font-size:13.2vw;line-height:.86}
-  .heroText{font-size:17px;line-height:1.35;margin-top:18px}
+  .heroText{font-size:17px;line-height:1.35;margin-top:0}
   .heroNote{font-size:13px;line-height:1.5;margin-top:8px}
   .actions{display:grid;grid-template-columns:1fr;gap:6px}
   .actions .btn{width:100%}
@@ -215,7 +216,7 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   .meta h3{font-size:18px}
   .final{padding:58px 0 72px}
   .finalBox{min-height:620px;padding:30px 24px;border-radius:25px;gap:24px}
-  .finalBox img{object-position:50% 50%}
+  .finalBox img{object-position:48% 50%}
   .finalBox:before{background:linear-gradient(180deg,rgba(5,9,10,.56) 0%,rgba(5,9,10,.64) 42%,rgba(5,9,10,.94) 78%,rgba(5,9,10,.98) 100%)}
   .finalBox h2{font-size:40px}
   .finalBox p{font-size:15px;margin-top:14px}
@@ -245,10 +246,14 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   <div class="heroMedia"><picture class="heroPicture"><source media="(max-width:980px)" srcset="assets/images/hero-mobile.jpg"><img class="heroImage" src="assets/images/hero-desktop.jpg" alt="Падел-корт в горах на берегу Катуни" fetchpriority="high"></picture></div>
   <div class="wrap heroIn">
     <div class="heroCopy">
-      <div class="k heroEyebrow">Империя туризма · Горный Алтай</div>
-      <h1><em class="heroTitleMain">ПАДЕЛ</em><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
-      <p class="heroText heroDescription">Падел-корт в горах, на берегу Катуни</p>
-      <p class="heroNote">Бронирование по телефону, аренда ракеток — на месте.</p>
+      <div class="heroHead">
+        <div class="k heroEyebrow">Империя туризма · Горный Алтай</div>
+        <h1><em class="heroTitleMain">ПАДЕЛ</em><br><span class="heroTitleSub">НА КАТУНИ</span></h1>
+      </div>
+      <div class="heroDetails">
+        <p class="heroText heroDescription">Падел-корт в горах, на берегу Катуни</p>
+        <p class="heroNote">Бронирование по телефону, аренда ракеток — на месте.</p>
+      </div>
     </div>
     <div class="actions"><a class="btn js-phone-href" href="tel:+79039120022">Забронировать ↗</a><a class="phone js-phone js-phone-href" href="tel:+79039120022">+7 903 912-00-22</a></div>
     <div class="stats"><div class="stat"><small>Режим</small><strong id="hoursMain">24/7</strong></div><div class="stat"><small>Корт / час</small><strong id="courtPriceHero">3 500 ₽</strong></div><div class="stat"><small>Ракетка / час</small><strong id="racketPriceHero">500 ₽</strong></div></div>
