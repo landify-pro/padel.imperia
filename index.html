@@ -134,6 +134,7 @@ section{padding:96px 0}
 .finalBox>*{position:relative;z-index:2}
 .finalBox h2{font-size:clamp(48px,5.5vw,82px);line-height:.92;letter-spacing:-.06em;margin:10px 0 0}
 .finalBox p{max-width:560px;margin:18px 0 0;font-size:17px;line-height:1.58;color:rgba(255,255,255,.95);text-shadow:0 2px 16px rgba(0,0,0,.38)}
+.finalMobileText{display:none}
 .finalPhone{display:inline-block;margin-top:18px;color:var(--lime);font-size:30px;font-weight:900;text-decoration:none}
 .finalBox>.btn{width:100%;min-height:72px;font-size:14px}
 
@@ -189,6 +190,7 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   .heroIn{padding-top:34px;padding-bottom:24px;gap:14px}
   .heroCopy{display:contents}
   .heroHead{position:absolute;top:24px;left:0;width:100%;max-width:none}
+  .heroDetails{display:none}
   h1{font-size:13.2vw;line-height:.86}
   .heroText{font-size:17px;line-height:1.35;margin-top:0}
   .heroNote{font-size:13px;line-height:1.5;margin-top:8px}
@@ -220,6 +222,8 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   .finalBox:before{background:linear-gradient(180deg,rgba(5,9,10,.56) 0%,rgba(5,9,10,.64) 42%,rgba(5,9,10,.94) 78%,rgba(5,9,10,.98) 100%)}
   .finalBox h2{font-size:40px}
   .finalBox p{font-size:15px;margin-top:14px}
+  .finalDesktopText{display:none}
+  .finalMobileText{display:inline}
   .finalPhone{font-size:23px}
   .finalBox>.btn{min-height:62px}
   .foot{display:block;text-align:center}
@@ -307,7 +311,7 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
 
 <section class="final">
   <div class="wrap">
-    <div class="finalBox"><img src="assets/images/padel-final-approved-16x9.jpg" alt="Падел-корт с высоты" loading="lazy"><div><div class="k" style="color:#d6ff2b">Готовы сыграть?</div><h2>Забронировать корт</h2><p>Позвоните администратору — проверим свободное время.</p><a class="finalPhone js-phone js-phone-href" href="tel:+79039120022">+7 903 912-00-22</a></div><a class="btn js-phone-href" href="tel:+79039120022">Забронировать ↗</a></div>
+    <div class="finalBox"><img src="assets/images/padel-final-approved-16x9.jpg" alt="Падел-корт с высоты" loading="lazy"><div><div class="k" style="color:#d6ff2b">Готовы сыграть?</div><h2>Забронировать корт</h2><p><span class="finalDesktopText">Позвоните администратору — проверим свободное время.</span><span class="finalMobileText">Падел-корт в горах, на берегу Катуни.<br>Бронирование по телефону, аренда ракеток — на месте.</span></p><a class="finalPhone js-phone js-phone-href" href="tel:+79039120022">+7 903 912-00-22</a></div><a class="btn js-phone-href" href="tel:+79039120022">Забронировать ↗</a></div>
   </div>
 </section>
 </main>
