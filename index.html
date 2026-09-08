@@ -129,8 +129,8 @@ section{padding:96px 0}
 
 .final{padding:76px 0 96px}
 .finalBox{position:relative;min-height:560px;border-radius:34px;overflow:hidden;padding:52px 56px;display:grid;grid-template-columns:minmax(0,760px) minmax(280px,420px);gap:42px;align-items:end;box-shadow:var(--shadow);color:#fff;background:#0d1515}
-.finalBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center}
-.finalBox:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,10,.92) 0%,rgba(5,9,10,.76) 39%,rgba(5,9,10,.38) 64%,rgba(5,9,10,.18) 100%),linear-gradient(180deg,rgba(5,9,10,.12),rgba(5,9,10,.35));z-index:1}
+.finalBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.finalBox:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,9,10,.92) 0%,rgba(5,9,10,.76) 39%,rgba(5,9,10,.38) 64%,rgba(5,9,10,.18) 100%),linear-gradient(180deg,rgba(5,9,10,.38),rgba(5,9,10,.56));z-index:1}
 .finalBox>*{position:relative;z-index:2}
 .finalBox h2{font-size:clamp(48px,5.5vw,82px);line-height:.92;letter-spacing:-.06em;margin:10px 0 0}
 .finalBox p{max-width:560px;margin:18px 0 0;font-size:17px;line-height:1.58;color:rgba(255,255,255,.95);text-shadow:0 2px 16px rgba(0,0,0,.38)}
@@ -187,7 +187,8 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   .brand b{font-size:18px}
   .brand small{font-size:8px}
   .heroIn{padding-top:34px;padding-bottom:24px;gap:14px}
-  h1{font-size:15.2vw;line-height:.86}
+  .heroCopy{position:absolute;top:24px;left:0;width:100%;max-width:none}
+  h1{font-size:13.2vw;line-height:.86}
   .heroText{font-size:17px;line-height:1.35;margin-top:18px}
   .heroNote{font-size:13px;line-height:1.5;margin-top:8px}
   .actions{display:grid;grid-template-columns:1fr;gap:6px}
@@ -214,7 +215,8 @@ footer{padding:27px 0 34px;border-top:1px solid var(--line);background:#fafbf7}
   .meta h3{font-size:18px}
   .final{padding:58px 0 72px}
   .finalBox{min-height:620px;padding:30px 24px;border-radius:25px;gap:24px}
-  .finalBox:before{background:linear-gradient(180deg,rgba(5,9,10,.33) 0%,rgba(5,9,10,.42) 42%,rgba(5,9,10,.94) 78%,rgba(5,9,10,.98) 100%)}
+  .finalBox img{object-position:50% 50%}
+  .finalBox:before{background:linear-gradient(180deg,rgba(5,9,10,.56) 0%,rgba(5,9,10,.64) 42%,rgba(5,9,10,.94) 78%,rgba(5,9,10,.98) 100%)}
   .finalBox h2{font-size:40px}
   .finalBox p{font-size:15px;margin-top:14px}
   .finalPhone{font-size:23px}
